@@ -2,122 +2,31 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Robert J. Carroll
 
-[Link to another page](./another-page.html).
+I'm a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.
 
-There should be whitespace between paragraphs.
+## Contact
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Email: my three initials AT illinois dot ee dee you
 
-# Header 1
+## CV
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+[CV](CV.pdf)
 
-## Header 2
+## Working papers
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+- [Policy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)](policy-devolution.pdf)
+- [The Shape of Possible States](00-spof.pdf)
+- [A Theory of Force](00-atof.pdf)
 
-### Header 3
+## Published work
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+- [Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg)](https://journals.sagepub.com/doi/full/10.1177/09516298241237209)
+- [Costly signaling in autocracy (with Amy Pond)](https://www.tandfonline.com/doi/abs/10.1080/03050629.2021.1898956)
+- [Prediction, proxies, and power (with Brenton Kenkel)](https://doi-org.proxy2.library.illinois.edu/10.1111/ajps.12442)
+- [Using item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter)](https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.2463)
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+## Teaching materials
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+- [Lectures for undergraduate game theory course](https://youtube.com/playlist?list=PLc7nd1hqyQFf5HeiiOtw55D_BnU0nRcD8&si=RqSaHYOUS3Jsztoe)
