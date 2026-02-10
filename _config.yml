@@ -1,6 +1,6 @@
-title: Minimal theme
+title: Rob Carroll
 logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
+description: Website for Rob Carroll, a political scientist at the University of Illinois at Urbana-Champaign
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
