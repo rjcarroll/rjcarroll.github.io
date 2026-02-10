@@ -17,8 +17,8 @@ Email: my three initials AT illinois dot ee dee you
 ## Working papers
 
 - [Policy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)](policy-devolution.pdf)
-- [The Shape of Possible States](00-spof.pdf)
-- [A Theory of Force](00-atof.pdf)
+- [The shape of possible states](00-spof.pdf)
+- [A theory of force](00-atof.pdf)
 
 ## Published work
 
