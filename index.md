@@ -16,6 +16,7 @@ Email: my three initials AT illinois dot ee dee you
 
 ## Working papers
 
+- [Sunspot volatility and the price of peace](sunspot.pdf)
 - [Policy devolution and cooperation dilemmas (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))](policy-devolution.pdf)
 - [The shape of possible states](00-spof.pdf)
 - [A theory of force](00-atof.pdf)
