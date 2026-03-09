@@ -16,6 +16,7 @@ Email: my three initials AT illinois dot ee dee you
 
 ## Working papers
 
+- [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
 - [Sunspot volatility and the price of peace](sunspot.pdf)
 - [Policy devolution and cooperation dilemmas](policy-devolution.pdf) (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
 - [The shape of possible states](00-spof.pdf)
