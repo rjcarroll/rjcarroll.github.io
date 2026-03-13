@@ -33,8 +33,3 @@ Email: my three initials AT illinois dot ee dee you
 ## Teaching materials
 
 - [Lectures for undergraduate game theory course](https://youtube.com/playlist?list=PLc7nd1hqyQFf5HeiiOtw55D_BnU0nRcD8&si=RqSaHYOUS3Jsztoe)
-
-## Miscellany
-
-- [Digitizing Georges Six’s _Dictionnaire biographique_: A Data Pipeline for French Revolutionary Military
-Biography](pipeline_overview.pdf)
