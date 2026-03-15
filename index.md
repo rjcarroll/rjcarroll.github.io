@@ -16,6 +16,7 @@ Email: my three initials AT illinois dot ee dee you
 
 ## Working papers
 
+- [Making peace on the cheap](cheap.pdf)
 - [Fighting in the shadow of intervention: a learned-proxy analysis](shadow.pdf)
 - [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
 - [Sunspot volatility and the price of peace](sunspot.pdf)
