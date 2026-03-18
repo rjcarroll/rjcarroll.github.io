@@ -23,6 +23,7 @@ Email: my three initials AT illinois dot ee dee you
 - [Policy devolution and cooperation dilemmas](policy-devolution.pdf) (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
 - [The shape of possible states](shape.pdf)
 - [A theory of force](00-atof.pdf)
+- [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
 
 ## Published work
 
