@@ -16,15 +16,16 @@ Email: my three initials AT illinois dot ee dee you
 
 ## Working papers
 
-- [Making peace on the cheap](cheap.pdf)
 - [Fighting in the shadow of intervention: a learned-proxy analysis](shadow.pdf)
-- [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
-- [Sunspot volatility and the price of peace](sunspot.pdf)
 - [Policy devolution and cooperation dilemmas](policy-devolution.pdf) (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
+- [Making peace on the cheap](cheap.pdf)
+- [Sunspot volatility and the price of peace](sunspot.pdf)
 - [The shape of possible states](shape.pdf)
+- [Preferring unified theories](theories.pdf)
+- [The causal content of game-theoretic models](choices.pdf)
 - [A theory of force](00-atof.pdf)
 - [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
-- [Preferring unified theories](theories.pdf)
+- [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
 
 ## Published work
 
