@@ -24,7 +24,7 @@ Email: my three initials AT illinois dot ee dee you
 - [The shape of possible states](shape.pdf)
 - [A theory of force](00-atof.pdf)
 - [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
-- [Preferring unified theories](preferring-unified-theories.pdf)
+- [Preferring unified theories](theories.pdf)
 
 ## Published work
 
