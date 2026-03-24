@@ -23,7 +23,7 @@ Email: my three initials AT illinois dot ee dee you
 - [The shape of possible states](shape.pdf)
 - [Preferring unified theories](theories.pdf)
 - [The causal content of game-theoretic models](choices.pdf)
-- [A theory of force](00-atof.pdf)
+- [A theory of force](force.pdf)
 - [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
 - [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
 
