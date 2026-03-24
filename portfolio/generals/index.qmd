@@ -1,0 +1,34 @@
+---
+title: "Six's Generals"
+---
+
+::: {.project-meta}
+A data pipeline and quantitative analysis of French Revolutionary and Napoleonic military careers
+:::
+
+## Overview
+
+Between 1789 and 1815, France transformed its army root and branch. The Old Regime had structured military careers by seniority, lineage, and the venal sale of offices; the Revolution dissolved those structures wholesale. Careers that had taken a generation to advance compressed into years. Whether a man broke into the officer corps — and how quickly he rose once inside — depended less on birth than on the timing of his entry into service and on what the Republic needed from him that week.
+
+These dynamics survive in extraordinary detail in Georges Six's *Dictionnaire biographique des généraux et amiraux français de la Révolution et de l'Empire* (1934), a two-volume work containing biographical entries for 2,206 generals and admirals. Each entry is a compact chronological record — rank promotions, unit assignments, campaign participations, wounds, honors — set down clause by clause in a consistent semicolon-delimited prose style. The dictionary is, in effect, a longitudinal panel dataset in prose form.
+
+This project consists of two companion pieces:
+
+**The pipeline** converts Six's prose into structured, machine-readable data. It covers digitization via OCR, page-level cleaning, entry assembly across page boundaries, entry enrichment (errata, cross-references, date propagation), and clause-by-clause parsing into typed biographical events.
+
+**The quantitative introduction** uses the resulting dataset to examine eight questions: how rank structures worked and how fast careers moved; where generals came from; which battles mattered most and how they clustered; how unit assignments and career roles were distributed; what post-career provisions looked like; and how the imperial honor economy functioned — both as an institution and as a response to individual battlefield performance.
+
+## Selected findings
+
+- Promotion times at every rank level collapsed during the Revolution (median ~1 year per step), partially recovered under the Empire (~4 years), but never returned to Old Regime pace (~5–6 years). The shift is over-determined: seniority rules abolished, army expanded from 180K to 700K men, performance displacing birth as the criterion for advancement.
+- There is essentially no individual "momentum" in promotion speed within eras (r = 0.003), with one exception: a within-Revolution correlation of r = 0.13 suggests modest merit-selection even inside the accelerated environment.
+- The Arc de Triomphe inscriptions are not a representative sample of the war's battles — they systematically over-represent engagements where Napoleon was personally present.
+
+## Resources
+
+- [Data pipeline](../../generals-pipeline.pdf) — OCR, cleaning, entry assembly, clause parsing
+- [Quantitative introduction](../../generals-introduction.pdf) — career dynamics, geography, battles, honors
+
+---
+
+*Dataset available on request.*

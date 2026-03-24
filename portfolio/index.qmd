@@ -1,0 +1,72 @@
+---
+title: "Portfolio"
+---
+
+Three projects in quantitative methods and data infrastructure for social science research.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+
+### [D-SOCIAL-KLD](csr/)
+
+**Dynamic corporate social responsibility scores, 1991–2018**
+
+KLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years.
+
+<span class="project-tag">Bayesian inference</span>
+<span class="project-tag">IRT</span>
+<span class="project-tag">Stan</span>
+<span class="project-tag">R</span>
+
+::: {.card-links}
+[Project page](csr/) · [Paper](https://doi.org/10.1002/smj.2463)
+:::
+
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+
+### [Six's Generals](generals/)
+
+**Digitizing 2,206 Napoleonic-era military biographies**
+
+Georges Six's *Dictionnaire biographique* (1934) contains structured biographical entries for every general and admiral of Revolutionary and Imperial France. This project builds a pipeline to convert Six's semicolon-delimited prose into a machine-readable panel dataset, then uses it to examine promotion dynamics, battlefield careers, and the imperial honor economy.
+
+<span class="project-tag">NLP / OCR</span>
+<span class="project-tag">Data pipeline</span>
+<span class="project-tag">Python</span>
+<span class="project-tag">Military history</span>
+
+::: {.card-links}
+[Project page](generals/) · [Pipeline doc](../generals-pipeline.pdf) · [Analysis](../generals-introduction.pdf)
+:::
+
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+
+### [Shadow of Intervention](shadow/)
+
+**Measuring anticipated third-party intervention in civil wars**
+
+Theory predicts that expected outside intervention shapes the decision to rebel, but no existing measure covers the full population of potential interveners. This project constructs one using a two-stage learned-proxy design: a machine-learning ensemble predicts intervention probabilities for every directed dyad-year; predictions are aggregated to a country-year shadow disciplined by a Nash fixed-point condition.
+
+<span class="project-tag">Machine learning</span>
+<span class="project-tag">Causal inference</span>
+<span class="project-tag">Civil conflict</span>
+<span class="project-tag">Measurement</span>
+
+::: {.card-links}
+[Project page](shadow/) · [Paper](../shadow.pdf)
+:::
+
+:::
+:::
+
+:::

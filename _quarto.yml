@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "portfolio/**/*.qmd"
+  resources:
+    - CNAME
+    - "*.pdf"
+    - "*.png"
+    - "portfolio/csr/methodology.html"
+
+website:
+  title: "Robert J. Carroll"
+  favicon: thumbnail.png
+  navbar:
+    background: light
+    foreground: dark
+    left:
+      - text: "Robert J. Carroll"
+        href: index.qmd
+    right:
+      - text: "CV"
+        href: CV.pdf
+  page-footer:
+    left: "Robert J. Carroll"
+    right: "University of Illinois at Urbana-Champaign"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    link-external-newwindow: true

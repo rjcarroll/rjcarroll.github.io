@@ -1,0 +1,52 @@
+---
+title: "D-SOCIAL-KLD"
+---
+
+::: {.project-meta}
+Dynamic IRT scores for corporate social responsibility · 1991–2018 · with David Primo and Brian Kelleher Richter
+:::
+
+## Overview
+
+KLD STATS (now MSCI ESG) codes publicly traded U.S. firms on dozens of binary indicators each year — strengths and concerns across categories like environment, labor, governance, and community relations. The standard approach in the management literature is the **KLD Index**: sum the strengths and subtract the concerns. This treats every indicator as equally informative, which is a strong and usually implausible assumption.
+
+**D-SOCIAL-KLD** replaces the additive index with a **dynamic two-parameter IRT model**. The model treats firms as examinees and KLD indicators as test items. A discrimination parameter for each item lets the data decide how informative each indicator is; a difficulty parameter captures how demanding each indicator is at the population level. A firm-specific random walk prior links scores across years, encoding the intuition that a firm's CSR position in 2006 is strongly predicted by its position in 2005.
+
+The result is a posterior distribution over a latent CSR score $\theta_{it}$ for each firm-year — with uncertainty quantified, discrimination weights estimated from the data, and year-to-year dynamics modeled explicitly.
+
+## The model
+
+$$
+y_{ijt} \sim \text{Bernoulli}\bigl(\Phi(\beta_{jt} \cdot \theta_{it} - \alpha_{jt})\bigr)
+$$
+
+- $\theta_{it}$: latent CSR score for firm $i$ in year $t$
+- $\alpha_{jt}$: difficulty of indicator $j$ in year $t$
+- $\beta_{jt}$: discrimination of indicator $j$ in year $t$
+- Year-to-year dynamics: $\theta_{i,t} = \theta_{i,t-1} + \sigma_{\text{firm},i} \cdot \varepsilon$
+
+Estimation uses Stan's No-U-Turn Sampler with a **non-centered parameterization** for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior.
+
+## Data
+
+- **Source**: KLD STATS, 1991–2018, via Wharton Research Data Services
+- **Coverage**: ~6,300 unique firms; 2,000+ indicator-year items; ~1.5M non-missing observations
+- **Universe**: firms present in the KLD database by 2012 (for comparability with published scores)
+
+## Outputs
+
+The estimation pipeline produces posterior means, standard deviations, and percentiles for:
+
+- **Firm-year scores** ($\theta_{it}$): the primary quantity of interest
+- **Item parameters** ($\alpha_{jt}$, $\beta_{jt}$): difficulty and discrimination for each indicator-year
+
+Scores are interval-scaled and centered near zero in each year. Posterior uncertainty is reported explicitly and should be propagated into downstream analyses.
+
+## Resources
+
+- [Published paper](https://doi.org/10.1002/smj.2463) — Carroll, Primo & Richter (2016), *Strategic Management Journal*
+- [Methodology document](methodology.html) — model specification, estimation details, and implementation notes
+
+---
+
+*Code and data available on request. Full draws will be made available at socialscores.org.*
