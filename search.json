@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "portfolio/shadow/index.html",
+    "href": "portfolio/shadow/index.html",
+    "title": "Shadow of Intervention",
+    "section": "",
+    "text": "A learned-proxy measure of anticipated third-party intervention in civil conflicts"
+  },
+  {
+    "objectID": "portfolio/shadow/index.html#overview",
+    "href": "portfolio/shadow/index.html#overview",
+    "title": "Shadow of Intervention",
+    "section": "Overview",
+    "text": "Overview\nA growing body of theory predicts that anticipated third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. Yet no existing measure of expected intervention covers the full population of potential interveners, varies annually with shifting alliances and foreign policy alignments, and treats intervention direction (government-biased vs. opposition-biased) as the primary quantity of interest.\nThis project constructs such a measure and uses it to test the hypothesis that the shadow of intervention shapes civil war onset."
+  },
+  {
+    "objectID": "portfolio/shadow/index.html#the-construction",
+    "href": "portfolio/shadow/index.html#the-construction",
+    "title": "Shadow of Intervention",
+    "section": "The construction",
+    "text": "The construction\nThe core contribution is a two-stage learned-proxy design:\nStage 1 — Prediction. A machine-learning ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural form earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.\nStage 2 — Aggregation. Dyad-level predictions are aggregated across all potential interveners to produce a country-year shadow, disciplined by a Nash fixed-point condition requiring each state’s predicted probability to be self-consistent as an input to the others’ predictions. The fixed-point is computationally tractable under the separability assumption that the opposition’s payoff is additive across interveners.\nThe resulting measures — expected government-biased intervention and expected opposition-biased intervention — are tested in a standard country-year onset framework. Government-biased intervention deters onset; opposition-biased intervention encourages it. The directional pattern holds across specifications, measurement draws, and a country fixed-effects estimator."
+  },
+  {
+    "objectID": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
+    "href": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
+    "title": "Shadow of Intervention",
+    "section": "Honest accounting of uncertainty",
+    "text": "Honest accounting of uncertainty\nThe learned-proxy approach has well-documented pitfalls, catalogued by Knox et al. (2022): measurement-stage uncertainty is routinely ignored, proxy quality is asserted rather than tested, and the disconnect between prediction and inference is papered over. This project follows their recommendations closely.\nMeasurement uncertainty is propagated into Stage 2 via a two-stage pairs cluster bootstrap that averages across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage rather than the regression. The shadow subsumes both leading existing proxies and carries out-of-sample predictive content."
+  },
+  {
+    "objectID": "portfolio/shadow/index.html#resources",
+    "href": "portfolio/shadow/index.html#resources",
+    "title": "Shadow of Intervention",
+    "section": "Resources",
+    "text": "Resources\n\nPaper — full manuscript"
+  },
+  {
+    "objectID": "portfolio/generals/index.html",
+    "href": "portfolio/generals/index.html",
+    "title": "Six’s Generals",
+    "section": "",
+    "text": "A data pipeline and quantitative analysis of French Revolutionary and Napoleonic military careers"
+  },
+  {
+    "objectID": "portfolio/generals/index.html#overview",
+    "href": "portfolio/generals/index.html#overview",
+    "title": "Six’s Generals",
+    "section": "Overview",
+    "text": "Overview\nBetween 1789 and 1815, France transformed its army root and branch. The Old Regime had structured military careers by seniority, lineage, and the venal sale of offices; the Revolution dissolved those structures wholesale. Careers that had taken a generation to advance compressed into years. Whether a man broke into the officer corps — and how quickly he rose once inside — depended less on birth than on the timing of his entry into service and on what the Republic needed from him that week.\nThese dynamics survive in extraordinary detail in Georges Six’s Dictionnaire biographique des généraux et amiraux français de la Révolution et de l’Empire (1934), a two-volume work containing biographical entries for 2,206 generals and admirals. Each entry is a compact chronological record — rank promotions, unit assignments, campaign participations, wounds, honors — set down clause by clause in a consistent semicolon-delimited prose style. The dictionary is, in effect, a longitudinal panel dataset in prose form.\nThis project consists of two companion pieces:\nThe pipeline converts Six’s prose into structured, machine-readable data. It covers digitization via OCR, page-level cleaning, entry assembly across page boundaries, entry enrichment (errata, cross-references, date propagation), and clause-by-clause parsing into typed biographical events.\nThe quantitative introduction uses the resulting dataset to examine eight questions: how rank structures worked and how fast careers moved; where generals came from; which battles mattered most and how they clustered; how unit assignments and career roles were distributed; what post-career provisions looked like; and how the imperial honor economy functioned — both as an institution and as a response to individual battlefield performance."
+  },
+  {
+    "objectID": "portfolio/generals/index.html#selected-findings",
+    "href": "portfolio/generals/index.html#selected-findings",
+    "title": "Six’s Generals",
+    "section": "Selected findings",
+    "text": "Selected findings\n\nPromotion times at every rank level collapsed during the Revolution (median ~1 year per step), partially recovered under the Empire (~4 years), but never returned to Old Regime pace (~5–6 years). The shift is over-determined: seniority rules abolished, army expanded from 180K to 700K men, performance displacing birth as the criterion for advancement.\nThere is essentially no individual “momentum” in promotion speed within eras (r = 0.003), with one exception: a within-Revolution correlation of r = 0.13 suggests modest merit-selection even inside the accelerated environment.\nThe Arc de Triomphe inscriptions are not a representative sample of the war’s battles — they systematically over-represent engagements where Napoleon was personally present."
+  },
+  {
+    "objectID": "portfolio/generals/index.html#resources",
+    "href": "portfolio/generals/index.html#resources",
+    "title": "Six’s Generals",
+    "section": "Resources",
+    "text": "Resources\n\nData pipeline — OCR, cleaning, entry assembly, clause parsing\nQuantitative introduction — career dynamics, geography, battles, honors\n\n\nDataset available on request."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "I’m a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.\n\n\nEmail: rjc AT illinois dot edu\n\n\n\n\nFighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations\n\n\n\n\n\nStrategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016.\n\n\n\n\n\nLectures for undergraduate game theory course"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Email: rjc AT illinois dot edu"
+  },
+  {
+    "objectID": "index.html#working-papers",
+    "href": "index.html#working-papers",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Fighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations"
+  },
+  {
+    "objectID": "index.html#published-work",
+    "href": "index.html#published-work",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016."
+  },
+  {
+    "objectID": "index.html#teaching-materials",
+    "href": "index.html#teaching-materials",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Lectures for undergraduate game theory course"
+  },
+  {
+    "objectID": "portfolio/csr/index.html",
+    "href": "portfolio/csr/index.html",
+    "title": "D-SOCIAL-KLD",
+    "section": "",
+    "text": "Dynamic IRT scores for corporate social responsibility · 1991–2018 · with David Primo and Brian Kelleher Richter"
+  },
+  {
+    "objectID": "portfolio/csr/index.html#overview",
+    "href": "portfolio/csr/index.html#overview",
+    "title": "D-SOCIAL-KLD",
+    "section": "Overview",
+    "text": "Overview\nKLD STATS (now MSCI ESG) codes publicly traded U.S. firms on dozens of binary indicators each year — strengths and concerns across categories like environment, labor, governance, and community relations. The standard approach in the management literature is the KLD Index: sum the strengths and subtract the concerns. This treats every indicator as equally informative, which is a strong and usually implausible assumption.\nD-SOCIAL-KLD replaces the additive index with a dynamic two-parameter IRT model. The model treats firms as examinees and KLD indicators as test items. A discrimination parameter for each item lets the data decide how informative each indicator is; a difficulty parameter captures how demanding each indicator is at the population level. A firm-specific random walk prior links scores across years, encoding the intuition that a firm’s CSR position in 2006 is strongly predicted by its position in 2005.\nThe result is a posterior distribution over a latent CSR score \\(\\theta_{it}\\) for each firm-year — with uncertainty quantified, discrimination weights estimated from the data, and year-to-year dynamics modeled explicitly."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#the-model",
+    "href": "portfolio/csr/index.html#the-model",
+    "title": "D-SOCIAL-KLD",
+    "section": "The model",
+    "text": "The model\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\]\n\n\\(\\theta_{it}\\): latent CSR score for firm \\(i\\) in year \\(t\\)\n\\(\\alpha_{jt}\\): difficulty of indicator \\(j\\) in year \\(t\\)\n\\(\\beta_{jt}\\): discrimination of indicator \\(j\\) in year \\(t\\)\nYear-to-year dynamics: \\(\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot \\varepsilon\\)\n\nEstimation uses Stan’s No-U-Turn Sampler with a non-centered parameterization for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#data",
+    "href": "portfolio/csr/index.html#data",
+    "title": "D-SOCIAL-KLD",
+    "section": "Data",
+    "text": "Data\n\nSource: KLD STATS, 1991–2018, via Wharton Research Data Services\nCoverage: ~6,300 unique firms; 2,000+ indicator-year items; ~1.5M non-missing observations\nUniverse: firms present in the KLD database by 2012 (for comparability with published scores)"
+  },
+  {
+    "objectID": "portfolio/csr/index.html#outputs",
+    "href": "portfolio/csr/index.html#outputs",
+    "title": "D-SOCIAL-KLD",
+    "section": "Outputs",
+    "text": "Outputs\nThe estimation pipeline produces posterior means, standard deviations, and percentiles for:\n\nFirm-year scores (\\(\\theta_{it}\\)): the primary quantity of interest\nItem parameters (\\(\\alpha_{jt}\\), \\(\\beta_{jt}\\)): difficulty and discrimination for each indicator-year\n\nScores are interval-scaled and centered near zero in each year. Posterior uncertainty is reported explicitly and should be propagated into downstream analyses."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#resources",
+    "href": "portfolio/csr/index.html#resources",
+    "title": "D-SOCIAL-KLD",
+    "section": "Resources",
+    "text": "Resources\n\nPublished paper — Carroll, Primo & Richter (2016), Strategic Management Journal\nMethodology document — model specification, estimation details, and implementation notes\n\n\nCode and data available on request. Full draws will be made available at socialscores.org."
+  },
+  {
+    "objectID": "portfolio/index.html",
+    "href": "portfolio/index.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Three projects in quantitative methods and data infrastructure for social science research.\n\n\n\nD-SOCIAL-KLD\nDynamic corporate social responsibility scores, 1991–2018\nKLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years.\nBayesian inference IRT Stan R\n\nProject page · Paper\n\n\n\n\n\nSix’s Generals\nDigitizing 2,206 Napoleonic-era military biographies\nGeorges Six’s Dictionnaire biographique (1934) contains structured biographical entries for every general and admiral of Revolutionary and Imperial France. This project builds a pipeline to convert Six’s semicolon-delimited prose into a machine-readable panel dataset, then uses it to examine promotion dynamics, battlefield careers, and the imperial honor economy.\nNLP / OCR Data pipeline Python Military history\n\nProject page · Pipeline doc · Analysis\n\n\n\n\n\nShadow of Intervention\nMeasuring anticipated third-party intervention in civil wars\nTheory predicts that expected outside intervention shapes the decision to rebel, but no existing measure covers the full population of potential interveners. This project constructs one using a two-stage learned-proxy design: a machine-learning ensemble predicts intervention probabilities for every directed dyad-year; predictions are aggregated to a country-year shadow disciplined by a Nash fixed-point condition.\nMachine learning Causal inference Civil conflict Measurement\n\nProject page · Paper"
+  }
+]
