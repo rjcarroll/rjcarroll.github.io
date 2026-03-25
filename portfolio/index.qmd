@@ -42,7 +42,7 @@ Georges Six's *Dictionnaire biographique* (1934) contains structured biographica
 <span class="project-tag">Military history</span>
 
 ::: {.card-links}
-[Project page](generals/) · [Pipeline doc](../generals-pipeline.pdf) · [Analysis](../generals-introduction.pdf)
+[Project page](generals/) · [GitHub](https://github.com/rjcarroll/generals) · [Pipeline doc](../generals-pipeline.pdf) · [Analysis](../generals-introduction.pdf)
 :::
 
 :::

@@ -22,6 +22,12 @@ website:
     right:
       - text: "CV"
         href: CV.pdf
+      - icon: github
+        href: https://github.com/rjcarroll
+      - icon: linkedin
+        href: https://www.linkedin.com/in/robcarrolluiuc/
+      - text: "Scholar"
+        href: https://scholar.google.com/citations?user=mzFx-RIAAAAJ&hl=en
   page-footer:
     left: "Robert J. Carroll"
     right: "University of Illinois at Urbana-Champaign"
