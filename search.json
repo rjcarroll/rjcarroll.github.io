@@ -25,7 +25,7 @@
     "href": "portfolio/shadow/index.html#uncertainty",
     "title": "Shadow of Intervention",
     "section": "Uncertainty",
-    "text": "Uncertainty\nThe learned-proxy approach has well-documented pitfalls: measurement-stage uncertainty is routinely ignored, and the disconnect between prediction and inference is papered over. This project follows Knox et al. (2022) closely. Measurement uncertainty is propagated into the regression via a two-stage pairs cluster bootstrap averaging across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage, not the regression. Standard errors that ignore this are not just conservative — they are wrong by nearly an order of magnitude."
+    "text": "Uncertainty\nThe learned-proxy approach has well-documented pitfalls: measurement-stage uncertainty is routinely ignored, and the disconnect between prediction and inference is papered over. This project follows Knox et al. (2022) closely. Measurement uncertainty is propagated into the regression via a two-stage pairs cluster bootstrap averaging across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage, not the regression. Standard errors that ignore this are not just conservative — they are wrong by a factor of three."
   },
   {
     "objectID": "portfolio/shadow/index.html#resources",
