@@ -4,28 +4,28 @@
     "href": "portfolio/shadow/index.html",
     "title": "Shadow of Intervention",
     "section": "",
-    "text": "A learned-proxy measure of anticipated third-party intervention in civil conflicts"
+    "text": "A learned-proxy measure of anticipated third-party intervention in civil conflicts\nTheory predicts that anticipated third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. But no existing measure covers the full population of potential interveners, varies annually with shifting foreign policy alignments, or distinguishes government-biased from opposition-biased intervention. This project constructs one and uses it to test whether the shadow of intervention shapes civil war onset."
   },
   {
-    "objectID": "portfolio/shadow/index.html#overview",
-    "href": "portfolio/shadow/index.html#overview",
+    "objectID": "portfolio/shadow/index.html#the-measure-in-practice",
+    "href": "portfolio/shadow/index.html#the-measure-in-practice",
     "title": "Shadow of Intervention",
-    "section": "Overview",
-    "text": "Overview\nA growing body of theory predicts that anticipated third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. Yet no existing measure of expected intervention covers the full population of potential interveners, varies annually with shifting alliances and foreign policy alignments, and treats intervention direction (government-biased vs. opposition-biased) as the primary quantity of interest.\nThis project constructs such a measure and uses it to test the hypothesis that the shadow of intervention shapes civil war onset."
+    "section": "The measure in practice",
+    "text": "The measure in practice\n\n\n\nGovernment-biased (\\(E^G\\), solid) and opposition-biased (\\(E^O\\), dashed) intervention expectations for five countries, 1946–2014. Shaded bands mark civil war years.\n\n\nThe time series shows the measure behaving as theory predicts: intervention expectations vary meaningfully across countries and across time, tracking foreign policy realities rather than static structural features. Afghanistan’s government-side shadow spikes with Soviet involvement and again with post-2001 NATO presence; Angola’s opposition-side shadow rises sharply through its long civil conflict; Egypt shows asymmetric exposure across eras.\nThe regression result is clean in both direction and asymmetry: expected government intervention reduces civil war onset (coef = −2.39, SE = 0.53), expected opposition intervention increases it (coef = +1.69, SE = 0.54). The shadow subsumes both leading existing proxies and carries independent out-of-sample predictive content."
   },
   {
-    "objectID": "portfolio/shadow/index.html#the-construction",
-    "href": "portfolio/shadow/index.html#the-construction",
+    "objectID": "portfolio/shadow/index.html#construction",
+    "href": "portfolio/shadow/index.html#construction",
     "title": "Shadow of Intervention",
-    "section": "The construction",
-    "text": "The construction\nThe core contribution is a two-stage learned-proxy design:\nStage 1 — Prediction. A machine-learning ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural form earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.\nStage 2 — Aggregation. Dyad-level predictions are aggregated across all potential interveners to produce a country-year shadow, disciplined by a Nash fixed-point condition requiring each state’s predicted probability to be self-consistent as an input to the others’ predictions. The fixed-point is computationally tractable under the separability assumption that the opposition’s payoff is additive across interveners.\nThe resulting measures — expected government-biased intervention and expected opposition-biased intervention — are tested in a standard country-year onset framework. Government-biased intervention deters onset; opposition-biased intervention encourages it. The directional pattern holds across specifications, measurement draws, and a country fixed-effects estimator."
+    "section": "Construction",
+    "text": "Construction\nThe measure is built in two stages.\nStage 1 — Prediction. A super learner ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural model earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.\nStage 2 — Aggregation. Dyad-level predictions are aggregated across all potential interveners to a country-year shadow, disciplined by a Nash fixed-point condition requiring each state’s predicted probability to be consistent as an input to the others’ predictions. The fixed-point is computationally tractable under a separability assumption; convergence is confirmed across all 25 imputation draws."
   },
   {
-    "objectID": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
-    "href": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
+    "objectID": "portfolio/shadow/index.html#uncertainty",
+    "href": "portfolio/shadow/index.html#uncertainty",
     "title": "Shadow of Intervention",
-    "section": "Honest accounting of uncertainty",
-    "text": "Honest accounting of uncertainty\nThe learned-proxy approach has well-documented pitfalls, catalogued by Knox et al. (2022): measurement-stage uncertainty is routinely ignored, proxy quality is asserted rather than tested, and the disconnect between prediction and inference is papered over. This project follows their recommendations closely.\nMeasurement uncertainty is propagated into Stage 2 via a two-stage pairs cluster bootstrap that averages across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage rather than the regression. The shadow subsumes both leading existing proxies and carries out-of-sample predictive content."
+    "section": "Uncertainty",
+    "text": "Uncertainty\nThe learned-proxy approach has well-documented pitfalls: measurement-stage uncertainty is routinely ignored, and the disconnect between prediction and inference is papered over. This project follows Knox et al. (2022) closely. Measurement uncertainty is propagated into the regression via a two-stage pairs cluster bootstrap averaging across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage, not the regression. Standard errors that ignore this are not just conservative — they are wrong by nearly an order of magnitude."
   },
   {
     "objectID": "portfolio/shadow/index.html#resources",

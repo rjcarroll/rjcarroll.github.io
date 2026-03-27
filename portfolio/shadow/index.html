@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -152,22 +181,27 @@ ul.task-list li input[type="checkbox"] {
 <div class="project-meta">
 <p>A learned-proxy measure of anticipated third-party intervention in civil conflicts</p>
 </div>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>A growing body of theory predicts that <em>anticipated</em> third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. Yet no existing measure of expected intervention covers the full population of potential interveners, varies annually with shifting alliances and foreign policy alignments, and treats intervention direction (government-biased vs.&nbsp;opposition-biased) as the primary quantity of interest.</p>
-<p>This project constructs such a measure and uses it to test the hypothesis that the shadow of intervention shapes civil war onset.</p>
+<p>Theory predicts that <em>anticipated</em> third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. But no existing measure covers the full population of potential interveners, varies annually with shifting foreign policy alignments, or distinguishes government-biased from opposition-biased intervention. This project constructs one and uses it to test whether the shadow of intervention shapes civil war onset.</p>
+<section id="the-measure-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="the-measure-in-practice">The measure in practice</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="shadow-ts.svg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Government-biased (<span class="math inline">\(E^G\)</span>, solid) and opposition-biased (<span class="math inline">\(E^O\)</span>, dashed) intervention expectations for five countries, 1946–2014. Shaded bands mark civil war years.</figcaption>
+</figure>
+</div>
+<p>The time series shows the measure behaving as theory predicts: intervention expectations vary meaningfully across countries and across time, tracking foreign policy realities rather than static structural features. Afghanistan’s government-side shadow spikes with Soviet involvement and again with post-2001 NATO presence; Angola’s opposition-side shadow rises sharply through its long civil conflict; Egypt shows asymmetric exposure across eras.</p>
+<p>The regression result is clean in both direction and asymmetry: expected government intervention reduces civil war onset (coef = −2.39, SE = 0.53), expected opposition intervention increases it (coef = +1.69, SE = 0.54). The shadow subsumes both leading existing proxies and carries independent out-of-sample predictive content.</p>
 </section>
-<section id="the-construction" class="level2">
-<h2 class="anchored" data-anchor-id="the-construction">The construction</h2>
-<p>The core contribution is a <strong>two-stage learned-proxy design</strong>:</p>
-<p><strong>Stage 1 — Prediction.</strong> A machine-learning ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural form earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.</p>
-<p><strong>Stage 2 — Aggregation.</strong> Dyad-level predictions are aggregated across all potential interveners to produce a country-year shadow, disciplined by a <strong>Nash fixed-point condition</strong> requiring each state’s predicted probability to be self-consistent as an input to the others’ predictions. The fixed-point is computationally tractable under the separability assumption that the opposition’s payoff is additive across interveners.</p>
-<p>The resulting measures — expected government-biased intervention and expected opposition-biased intervention — are tested in a standard country-year onset framework. Government-biased intervention deters onset; opposition-biased intervention encourages it. The directional pattern holds across specifications, measurement draws, and a country fixed-effects estimator.</p>
+<section id="construction" class="level2">
+<h2 class="anchored" data-anchor-id="construction">Construction</h2>
+<p>The measure is built in two stages.</p>
+<p><strong>Stage 1 — Prediction.</strong> A super learner ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural model earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.</p>
+<p><strong>Stage 2 — Aggregation.</strong> Dyad-level predictions are aggregated across all potential interveners to a country-year shadow, disciplined by a <strong>Nash fixed-point condition</strong> requiring each state’s predicted probability to be consistent as an input to the others’ predictions. The fixed-point is computationally tractable under a separability assumption; convergence is confirmed across all 25 imputation draws.</p>
 </section>
-<section id="honest-accounting-of-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="honest-accounting-of-uncertainty">Honest accounting of uncertainty</h2>
-<p>The learned-proxy approach has well-documented pitfalls, catalogued by Knox et al.&nbsp;(2022): measurement-stage uncertainty is routinely ignored, proxy quality is asserted rather than tested, and the disconnect between prediction and inference is papered over. This project follows their recommendations closely.</p>
-<p>Measurement uncertainty is propagated into Stage 2 via a two-stage pairs cluster bootstrap that averages across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage rather than the regression. The shadow subsumes both leading existing proxies and carries out-of-sample predictive content.</p>
+<section id="uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="uncertainty">Uncertainty</h2>
+<p>The learned-proxy approach has well-documented pitfalls: measurement-stage uncertainty is routinely ignored, and the disconnect between prediction and inference is papered over. This project follows Knox et al.&nbsp;(2022) closely. Measurement uncertainty is propagated into the regression via a two-stage pairs cluster bootstrap averaging across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage, not the regression. Standard errors that ignore this are not just conservative — they are wrong by nearly an order of magnitude.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
