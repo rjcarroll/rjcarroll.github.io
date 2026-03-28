@@ -21,7 +21,7 @@ KLD rates firms on dozens of binary ESG indicators each year. Rather than summin
 <span class="project-tag">R</span>
 
 ::: {.card-links}
-[Project page](csr/) · [Paper](https://doi.org/10.1002/smj.2463)
+[Project page](csr/) · [GitHub](https://github.com/rjcarroll/d-social-kld) · [Paper](https://doi.org/10.1002/smj.2463)
 :::
 
 :::
@@ -63,7 +63,7 @@ Theory predicts that expected outside intervention shapes the decision to rebel,
 <span class="project-tag">Measurement</span>
 
 ::: {.card-links}
-[Project page](shadow/) · [Paper](../shadow.pdf)
+[Project page](shadow/) · [GitHub](https://github.com/rjcarroll/shadow) · [Paper](../shadow.pdf)
 :::
 
 :::
