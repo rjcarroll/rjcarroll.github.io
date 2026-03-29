@@ -24,7 +24,7 @@ $$d_i = \sqrt{\left(\frac{\Delta x}{a_i \tau}\right)^2 + \left(\frac{\Delta y_\t
 
 The four parameters $(a_i, b_i, y_{0,i}, \gamma_i)$ — lateral speed, depth speed, starting depth, and charge asymmetry — define each player's range. Hang time is derived from launch speed and launch angle via $\tau = 2v_0\sin\theta/g$.
 
-**Why this matters.** Diagnosing the original two-parameter model on 2021–2024 data found systematic overprediction on charging plays (sectors 225–315°, mean residual −0.062) and significant spatial autocorrelation in 32 of 35 qualified players. Root cause: fielders typically play at y ≈ 320–330 ft, not the assumed 310 ft. The fixed-origin model conflated range with positioning. The v2.0 model absorbs this confound through $y_{0,i}$, leaving $(a_i, b_i, \gamma_i)$ as clean speed estimates from the player's actual location.
+**Why this matters.** Diagnosing the original two-parameter model on 2021–2024 data found systematic overprediction on charging plays (sectors 225–315°, mean residual −0.062) and significant spatial autocorrelation in 32 of 35 qualified players. Root cause: fielders play considerably deeper than the assumed 310 ft — the v2.0 model estimates a population-average starting depth of ~353 ft. The fixed-origin model conflated range with positioning. Introducing $y_{0,i}$ reduces the charging zone residual from −0.062 to −0.0002, leaving $(a_i, b_i, \gamma_i)$ as clean speed estimates from the player's actual location.
 
 ## Two statistics, two decisions
 
@@ -113,7 +113,33 @@ Because $y_{0,i}$ is already estimated by the model, the optimizer shifts from t
 
 **Environmental covariates.** Wind is the largest omitted variable. The natural correction is to adjust observed displacements for wind before fitting the model.
 
+## Validation
+
+Two external checks ground the model in data beyond what was used to fit it.
+
+**OAA correlation.** Statcast Outs Above Average (OAA) is an independent tracking-based metric derived from actual fielder routes, not catch/no-catch outcomes. Spearman $\rho(\text{OWR}, \text{OAA})$ is +0.18 to +0.33 across seasons — consistently positive and mostly significant. An additional check: the directional OAA decomposition (In vs Back zones) provides an independent signal on $\gamma_i$. Players with higher charge asymmetry in the model show a higher share of their OAA coming from "In" plays: $\rho(\gamma, \text{OAA In-fraction}) = +0.17$ pooled across seasons ($p = 0.001$).
+
+**Starting position face validity.** Because Statcast does not publish pre-play fielder coordinates in its public API, direct validation of $y_{0,i}$ against observed positions is not feasible. Three indirect checks: (1) the population mean of $y_{0,i}$ is +43 ft — the model infers fielders position at ~353 ft on average, deeper than the canonical 310 ft reference, consistent with typical CF fly-ball territory; (2) relative rankings pass a face-validity check — Brenton Doyle ranks among the deepest (Coors Field, thin air), Corbin Carroll and Byron Buxton among the shallowest (aggressive, speed-first positioning); and (3) plays under "Strategic" outfield alignment show higher RMSE than "Standard" plays (0.293 vs 0.265), confirming that the model fits worse precisely where its typical-positioning assumption is least valid.
+
+<iframe src="val_owr_vs_oaa.html" width="100%" height="780px" frameborder="0" scrolling="no"></iframe>
+
+Charge asymmetry ($\gamma_i$) vs directional OAA — players with higher model-estimated charge asymmetry earn a larger share of their defensive value from "In" plays:
+
+<iframe src="val_spectacular_vs_oaa.html" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+
 ## Results
+
+**v2.0 diagnostic summary.** The charging zone residual dropped from −0.062 to −0.0002 (FIXED). Boundary calibration improved from a +0.160 gap to +0.063 (PARTIAL). Year-over-year correlations are stable and improving as the sequential prior chain accumulates (OWR $\rho$ = 0.69–0.85, $b$ $\rho$ = 0.72–0.94 across adjacent seasons). The $\sigma_\text{transition}$ test finds no signal for a v3.0 state-space model — estimation noise dominates the year-to-year differences at current data volume.
+
+Directional residuals and spatial autocorrelation — the key v1.0 pathologies:
+
+<iframe src="diag_v2_directional.html" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<iframe src="diag_v2_morans.html" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+
+Year-over-year parameter stability across adjacent seasons:
+
+<iframe src="diag_v2_yoy.html" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
 
 Rankings by opportunity-weighted reliable range, 2021–2024:
 

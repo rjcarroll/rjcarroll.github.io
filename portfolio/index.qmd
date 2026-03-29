@@ -2,9 +2,30 @@
 title: "Portfolio"
 ---
 
-Three projects in quantitative methods and data infrastructure for social science research.
+Projects in quantitative methods, data infrastructure, and sports analytics.
 
 ::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+
+### [CF Range](baseball-range/)
+
+**Parametric range estimation for center fielders, 2021–2024**
+
+Each fielder gets a catchability ellipse fit to Statcast fly-ball outcomes via Stan. Four parameters capture lateral speed, depth speed, starting position, and charge asymmetry. Two statistics derived from one model, each designed for a different decision: opportunity-weighted range for free-agent evaluation, spectacular play probability for late-inning substitutions.
+
+<span class="project-tag">Bayesian inference</span>
+<span class="project-tag">Stan</span>
+<span class="project-tag">Statcast</span>
+<span class="project-tag">Baseball analytics</span>
+
+::: {.card-links}
+[Project page](baseball-range/) · [GitHub](https://github.com/rjcarroll/baseball-range)
+:::
+
+:::
+:::
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.project-card}
