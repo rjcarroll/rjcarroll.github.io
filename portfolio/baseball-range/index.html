@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CF Range – Robert J. Carroll</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../thumbnail.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f3aca4602ffac9eb49c572d4340d084e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Robert J. Carroll</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Robert J. Carroll</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../CV.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rjcarroll"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/robcarrolluiuc/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=mzFx-RIAAAAJ&amp;hl=en"> 
+<span class="menu-text">Scholar</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CF Range</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="project-meta">
+<p>Parametric range model for center fielders, fit to Statcast fly-ball data — sequential Bayesian updating across seasons, two decision-relevant statistics derived from one model</p>
+</div>
+<p>“Best” depends on the question. A fielder optimized for late-inning substitutions isn’t necessarily the one you sign as a free agent. This project builds a model of CF range and derives two statistics from it, each designed for a different front-office decision.</p>
+<section id="the-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-model">The model</h2>
+<p>Each fielder gets a catchability ellipse that scales with hang time. Four per-player parameters define their range.</p>
+<p><strong>Starting position</strong> <span class="math inline">\(y_{0,i}\)</span> — the fielder’s actual pre-play depth, estimated from catch/no-catch outcomes rather than assumed fixed. The adjusted displacement is <span class="math inline">\(\Delta y_\text{adj} = \Delta y - y_{0,i}\)</span>.</p>
+<p><strong>Asymmetric depth speed</strong> — fielders charge better than they retreat. A smooth asymmetry factor <span class="math inline">\(\gamma_i\)</span> stretches the forward half of the ellipse:</p>
+<p><span class="math display">\[w = \sigma\!\left(\frac{-\Delta y_\text{adj}}{5}\right), \quad b_\text{eff} = b_i \exp(\log \gamma_i \cdot w)\]</span></p>
+<p>where <span class="math inline">\(w \approx 1\)</span> on balls in front of the fielder and <span class="math inline">\(\approx 0\)</span> behind. The normalized distance and catch probability are then:</p>
+<p><span class="math display">\[d_i = \sqrt{\left(\frac{\Delta x}{a_i \tau}\right)^2 + \left(\frac{\Delta y_\text{adj}}{b_{\text{eff},i}\, \tau}\right)^2}, \qquad P(\text{catch}) = \sigma(\beta_0 - \beta_1 d_i)\]</span></p>
+<p>The four parameters <span class="math inline">\((a_i, b_i, y_{0,i}, \gamma_i)\)</span> — lateral speed, depth speed, starting depth, and charge asymmetry — define each player’s range. Hang time is derived from launch speed and launch angle via <span class="math inline">\(\tau = 2v_0\sin\theta/g\)</span>.</p>
+<p><strong>Why this matters.</strong> Diagnosing the original two-parameter model on 2021–2024 data found systematic overprediction on charging plays (sectors 225–315°, mean residual −0.062) and significant spatial autocorrelation in 32 of 35 qualified players. Root cause: fielders play considerably deeper than the assumed 310 ft — the v2.0 model estimates a population-average starting depth of ~353 ft. The fixed-origin model conflated range with positioning. Introducing <span class="math inline">\(y_{0,i}\)</span> reduces the charging zone residual from −0.062 to −0.0002, leaving <span class="math inline">\((a_i, b_i, \gamma_i)\)</span> as clean speed estimates from the player’s actual location.</p>
+</section>
+<section id="two-statistics-two-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="two-statistics-two-decisions">Two statistics, two decisions</h2>
+<p><span class="math inline">\((a_i, b_i)\)</span> are the parameters. The decision determines the estimand.</p>
+<p><strong>Reliable range</strong> weights each player’s range by where balls are actually hit. A play is in <span class="math inline">\(R_i\)</span> if the full posterior puts <span class="math inline">\(P(\text{catch}) \geq 0.80\)</span> in at least 80% of samples — high probability <em>and</em> high confidence:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> opportunity_weighted_range(player, all_fly_balls):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A play is "reliably covered" if ≥80% of posterior samples</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># give P(catch) ≥ 0.80</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    in_range <span class="op">=</span> fraction_above_threshold(player.posterior, fly_ball) <span class="op">&gt;=</span> <span class="fl">0.80</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> in_range.mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Spectacular play probability</strong> isolates performance in the thin-coverage zone — balls outside most fielders’ reliable ranges, where only the best CFs make plays:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spectacular_play_prob(player, fly_balls, spectacular_zone):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    hard_plays <span class="op">=</span> fly_balls[spectacular_zone]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use full posterior mean — actual expected performance on hard plays</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> catch_prob(player.a_mean, player.b_mean, hard_plays).mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The two stats can rank players differently. A player with elite straight-back range racks up opportunity-weighted range. A player who makes diving plays in the gaps earns spectacular play probability.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Decision</th>
+<th>Statistic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Free agent evaluation</td>
+<td>Opportunity-weighted reliable range</td>
+</tr>
+<tr class="even">
+<td>Late-inning substitution</td>
+<td>Spectacular play probability</td>
+</tr>
+<tr class="odd">
+<td>Park fit</td>
+<td>Shape of <span class="math inline">\(R_i\)</span>, not just size</td>
+</tr>
+</tbody>
+</table>
+<section id="reading-the-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-parameters">Reading the parameters</h3>
+<p>The model outputs <span class="math inline">\((a_i, b_i, y_{0,i}, \gamma_i)\)</span>; several derived quantities make them interpretable.</p>
+<p><strong>Ellipse area</strong> at hang time <span class="math inline">\(\tau\)</span> is <span class="math inline">\(\pi a b \tau^2\)</span> — the coverage footprint in square feet. At <span class="math inline">\(\tau = 5\)</span> seconds (a long fly ball), the 2021 median qualified CF covers about 23,300 sq ft. The best cover roughly 29,700 sq ft — 27% more ground, a gap comparable in size to a baseball diamond.</p>
+<p><strong>Marginal plays per season.</strong> The difference in opportunity-weighted range between two players, multiplied by the ~425 CF fly-ball opportunities per team slot per season, converts the statistic into a concrete defensive volume. In 2021, Harrison Bader’s range advantage over the median CF translates to roughly +34 plays per season; Michael Taylor’s to +26. A 0.03 difference in opportunity-weighted range is approximately 13 additional plays per season.</p>
+<p><strong>Shape ratio <span class="math inline">\(a/b\)</span></strong> characterizes the <em>type</em> of range independent of total size. Most qualified CFs fall between 1.5–2.0, reflecting that lateral movement is generally faster than depth movement. But the extremes are informative: Tyler Naquin (<span class="math inline">\(a/b \approx 2.2\)</span>) is strongly lateral-dominant — large total ellipse, but well below-median opportunity-weighted range because his coverage shape does not match where CF fly balls actually land. Yonathan Daza (<span class="math inline">\(a/b \approx 1.3\)</span>) runs the opposite pattern: modest total area but ranked in the top 3 for spectacular play probability, driven by unusual depth range.</p>
+<p><strong>Starting depth <span class="math inline">\(y_{0,i}\)</span></strong> is the player’s inferred pre-play position. A positive offset means the player typically positions deeper than 310 ft; negative means shallower. This absorbs the systematic overprediction on charging plays that afflicted the v1.0 model and makes <span class="math inline">\((a_i, b_i)\)</span> interpretable as pure speed estimates from the player’s actual location.</p>
+<p><strong>Charge asymmetry <span class="math inline">\(\gamma_i\)</span></strong> is the ratio of effective depth speed going in versus going back. <span class="math inline">\(\gamma_i &gt; 1\)</span> means the fielder is faster charging than retreating. The population prior is centered at <span class="math inline">\(\gamma = 1\)</span> — the data drives any departure, and the hierarchical structure prevents sparse-data players from getting extreme estimates.</p>
+<p><strong>Bader vs.&nbsp;Bradley (2021)</strong> shows how the shape decomposition works in practice. Both players have nearly identical lateral reach (~125 ft at <span class="math inline">\(\tau = 5\)</span> s). The entire gap between them — Bader’s ellipse is 13.6% larger — comes from depth: Bader reaches 75 ft deep versus Bradley’s 65 ft. Ten feet of additional depth range, compounded over a full season, accounts for roughly +26 plays.</p>
+</section>
+</section>
+<section id="bayesian-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-pipeline">Bayesian pipeline</h2>
+<p>The full implementation uses Stan with sequential season-to-season updating. Rather than re-estimating from scratch each year, each player’s prior for a new season is their previous season’s posterior, inflated by a factor <span class="math inline">\(\lambda\)</span> to allow for year-to-year change:</p>
+<p><span class="math display">\[\sigma_{\text{prior}} = \lambda \cdot \sigma_{\text{posterior}}, \quad \lambda = 1.25\]</span></p>
+<p>This encodes a sensible belief: a player’s range next year is probably similar to this year’s, but not identical. New players receive the population hyperparameters as their prior. The result:</p>
+<ul>
+<li>Players with few opportunities are pulled toward the population mean (shrinkage)</li>
+<li>Players with many opportunities are barely affected — the data overwhelms the prior</li>
+<li>As data accumulates through a season, credible bands on <span class="math inline">\((a_i, b_i)\)</span> narrow visibly</li>
+</ul>
+<p><strong>Burn-in</strong> (2017–2020): fit <code>cf_range_v2.stan</code> once to estimate population hyperparameters <span class="math inline">\((\mu_a, \sigma_a, \mu_b, \sigma_b, \mu_{y_0}, \sigma_{y_0}, \mu_{\log\gamma}, \sigma_{\log\gamma})\)</span> and logistic shape <span class="math inline">\((\beta_0, \beta_1)\)</span>.</p>
+<p><strong>Sequential updates</strong> (2021–2024): fit <code>cf_range_update_v2.stan</code> each season, passing all eight per-player prior parameters as data. <span class="math inline">\(\beta_0, \beta_1\)</span> are fixed at burn-in posterior means — re-estimating them from a single season would be poorly identified.</p>
+<p>The Bayesian reliable range <span class="math inline">\(R_i\)</span> uses the full posterior: a play is included if at least 80% of posterior samples give <span class="math inline">\(P(\text{catch}) \geq 0.80\)</span>. Thin-data players get a smaller <span class="math inline">\(R_i\)</span> because their wider posterior makes fewer plays reliably covered; as data accumulates through a season, the credible band narrows and <span class="math inline">\(R_i\)</span> stabilizes.</p>
+</section>
+<section id="part-2-optimal-positioning" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-optimal-positioning">Part 2: Optimal positioning</h2>
+<p>Knowing who has the best range answers one question. A different question: <em>given the fielder you have, where should you put him?</em></p>
+<p>For each batter, Statcast gives us a spray distribution of CF fly-ball landing spots. Given a fielder’s four parameters and that distribution, the optimal pre-pitch starting position is:</p>
+<p><span class="math display">\[(\hat{x}_0, \hat{y}_0) = \underset{x_0, y_0}{\arg\max} \; \mathbb{E}[\text{coverage} \mid x_0, y_0, f_{\text{batter}}, a_i, b_i, \gamma_i]\]</span></p>
+<p>Because <span class="math inline">\(y_{0,i}\)</span> is already estimated by the model, the optimizer shifts from the player’s inferred actual baseline rather than an assumed canonical depth. The answer depends on both the fielder’s range shape and the batter — a depth-dominant fielder may shade differently than a lateral-dominant peer facing the same pull hitter. The same framework quantifies the <em>value of shifting</em>: how much coverage does moving 15 ft gain, and for which fielder-batter pairs does positioning matter most?</p>
+</section>
+<section id="further-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="further-extensions">Further extensions</h2>
+<p><strong>Age curve on the prior mean.</strong> The sequential update currently assumes “next year = this year” as the baseline. A better motion law shifts the prior mean along a population-level age curve — estimated hierarchically from all players simultaneously. A 27-year-old’s prior for next season is slightly better than their current posterior; a 33-year-old’s is slightly worse. The variance inflation λ captures off-season uncertainty on top of the age trend. This is well-suited to a hierarchical model: individual aging curves are unidentifiable from a handful of seasons per player, but the population curve is estimable from the full panel.</p>
+<p><strong>Superellipse boundary.</strong> The ellipse (<span class="math inline">\(p=2\)</span>) assumes full directional coupling — lateral and depth movement compete for the same time budget. The superellipse <span class="math inline">\(d = \bigl(|\Delta x / a\tau|^p + |\Delta y_\text{adj} / b_\text{eff}\tau|^p\bigr)^{1/p}\)</span> relaxes this with a single additional parameter. The empirical test: rerun spatial autocorrelation (Moran’s I) on v2.0 residuals. If the clustering disappears once the positional confound is absorbed, the ellipse is adequate. If a symmetric residual pattern emerges at the 45° diagonals, <span class="math inline">\(p &gt; 2\)</span> is indicated.</p>
+<p><strong>Diagonal asymmetry.</strong> A correlation parameter <span class="math inline">\(\rho\)</span> in the distance metric yields a tilted ellipse whose principal axes rotate away from field coordinates, capturing directional preferences (natural glide paths, handedness) that <span class="math inline">\((a, b, \gamma)\)</span> cannot express. Worth adding if per-quadrant residual decomposition on high-data players shows systematic diagonal structure after v2.0.</p>
+<p><strong>Measurement uncertainty.</strong> Statcast landing coordinates carry ~1–2 ft of tracking error. Marginalizing over this with Gaussian quadrature rather than treating each coordinate as exact is a principled correction with negligible runtime cost.</p>
+<p><strong>Environmental covariates.</strong> Wind is the largest omitted variable. The natural correction is to adjust observed displacements for wind before fitting the model.</p>
+</section>
+<section id="validation" class="level2">
+<h2 class="anchored" data-anchor-id="validation">Validation</h2>
+<p>Two external checks ground the model in data beyond what was used to fit it.</p>
+<p><strong>OAA correlation.</strong> Statcast Outs Above Average (OAA) is an independent tracking-based metric derived from actual fielder routes, not catch/no-catch outcomes. Spearman <span class="math inline">\(\rho(\text{OWR}, \text{OAA})\)</span> is +0.18 to +0.33 across seasons — consistently positive and mostly significant. An additional check: the directional OAA decomposition (In vs Back zones) provides an independent signal on <span class="math inline">\(\gamma_i\)</span>. Players with higher charge asymmetry in the model show a higher share of their OAA coming from “In” plays: <span class="math inline">\(\rho(\gamma, \text{OAA In-fraction}) = +0.17\)</span> pooled across seasons (<span class="math inline">\(p = 0.001\)</span>).</p>
+<p><strong>Starting position face validity.</strong> Because Statcast does not publish pre-play fielder coordinates in its public API, direct validation of <span class="math inline">\(y_{0,i}\)</span> against observed positions is not feasible. Three indirect checks: (1) the population mean of <span class="math inline">\(y_{0,i}\)</span> is +43 ft — the model infers fielders position at ~353 ft on average, deeper than the canonical 310 ft reference, consistent with typical CF fly-ball territory; (2) relative rankings pass a face-validity check — Brenton Doyle ranks among the deepest (Coors Field, thin air), Corbin Carroll and Byron Buxton among the shallowest (aggressive, speed-first positioning); and (3) plays under “Strategic” outfield alignment show higher RMSE than “Standard” plays (0.293 vs 0.265), confirming that the model fits worse precisely where its typical-positioning assumption is least valid.</p>
+<iframe src="val_owr_vs_oaa.html" width="100%" height="780px" frameborder="0" scrolling="no">
+</iframe>
+<p>Charge asymmetry (<span class="math inline">\(\gamma_i\)</span>) vs directional OAA — players with higher model-estimated charge asymmetry earn a larger share of their defensive value from “In” plays:</p>
+<iframe src="val_spectacular_vs_oaa.html" width="100%" height="500px" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p><strong>v2.0 diagnostic summary.</strong> The charging zone residual dropped from −0.062 to −0.0002 (FIXED). Boundary calibration improved from a +0.160 gap to +0.063 (PARTIAL). Year-over-year correlations are stable and improving as the sequential prior chain accumulates (OWR <span class="math inline">\(\rho\)</span> = 0.69–0.85, <span class="math inline">\(b\)</span> <span class="math inline">\(\rho\)</span> = 0.72–0.94 across adjacent seasons). The <span class="math inline">\(\sigma_\text{transition}\)</span> test finds no signal for a v3.0 state-space model — estimation noise dominates the year-to-year differences at current data volume.</p>
+<p>Directional residuals and spatial autocorrelation — the key v1.0 pathologies:</p>
+<iframe src="diag_v2_directional.html" width="100%" height="500px" frameborder="0" scrolling="no">
+</iframe>
+<iframe src="diag_v2_morans.html" width="100%" height="500px" frameborder="0" scrolling="no">
+</iframe>
+<p>Year-over-year parameter stability across adjacent seasons:</p>
+<iframe src="diag_v2_yoy.html" width="100%" height="500px" frameborder="0" scrolling="no">
+</iframe>
+<p>Rankings by opportunity-weighted reliable range, 2021–2024:</p>
+<iframe src="bayes_rankings.html" width="100%" height="620px" frameborder="0" scrolling="no">
+</iframe>
+<p>Posterior catch probability for the top-ranked CF — dashed contour is the posterior-mean ellipse boundary, semi-transparent ellipses are individual posterior samples:</p>
+<iframe src="bayes_posterior_ellipse.html" width="100%" height="640px" frameborder="0" scrolling="no">
+</iframe>
+<p>Coverage across the outfield — how many qualified CFs have reliable range at each location. Dark spots are the spectacular zone:</p>
+<iframe src="bayes_spectacular_zone.html" width="100%" height="660px" frameborder="0" scrolling="no">
+</iframe>
+<p>Within-season evolution for 2024 — credible bands narrow as data accumulates through the year:</p>
+<iframe src="bayes_season_evolution.html" width="100%" height="500px" frameborder="0" scrolling="no">
+</iframe>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/rjcarroll/baseball-range">GitHub</a> — full code, model, and data pipeline</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/robertjcarroll\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Robert J. Carroll</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>University of Illinois at Urbana-Champaign</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
