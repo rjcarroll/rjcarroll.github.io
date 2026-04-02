@@ -25,12 +25,12 @@ $$
 - $\beta_{jt}$: discrimination of indicator $j$ in year $t$
 - Year-to-year dynamics: $\theta_{i,t} = \theta_{i,t-1} + \sigma_{\text{firm},i} \cdot \varepsilon$
 
-Estimation uses Stan's No-U-Turn Sampler with a **non-centered parameterization** for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior.
+Estimation uses Stan's No-U-Turn Sampler with a **non-centered parameterization** for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior. The full model (~120K parameters) runs 4 chains for 3,500 iterations each, completing in approximately 3 days with zero divergent transitions.
 
 ## Data
 
 - **Source**: KLD STATS, 1991–2018, via Wharton Research Data Services
-- **Coverage**: ~6,300 unique firms; 2,000+ indicator-year items; ~1.5M non-missing observations
+- **Coverage**: ~6,300 unique firms; 2,068 indicator-year items; 3.3M non-missing observations across 51,586 firm-years
 - **Universe**: firms present in the KLD database by 2012 (for comparability with published scores)
 
 ## Outputs
