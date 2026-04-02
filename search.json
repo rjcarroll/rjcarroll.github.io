@@ -1,38 +1,101 @@
 [
   {
-    "objectID": "teaching-portfolio/index.html",
-    "href": "teaching-portfolio/index.html",
-    "title": "Teaching Portfolio",
+    "objectID": "portfolio/shadow/index.html",
+    "href": "portfolio/shadow/index.html",
+    "title": "Shadow of Intervention",
     "section": "",
-    "text": "Undergraduate and graduate instruction in game theory and strategic interaction — built around high-production asynchronous lecture design, flipped-classroom problem-solving, and original instructional materials."
+    "text": "A learned-proxy measure of anticipated third-party intervention in civil conflicts"
   },
   {
-    "objectID": "teaching-portfolio/index.html#ps-231-strategic-models",
-    "href": "teaching-portfolio/index.html#ps-231-strategic-models",
-    "title": "Teaching Portfolio",
-    "section": "PS 231: Strategic Models",
-    "text": "PS 231: Strategic Models\nPS 231 is an undergraduate introduction to game theory and its applications in political science. The course runs on a flipped classroom design: content is delivered through a series of 14 asynchronous lecture videos; all synchronous class time is reserved for problem set Q&A and worked examples. Students arrive having watched the lecture. The hour together is for doing, not listening.\n\nLecture series\nThe 14 lectures are produced in 4K — face-cam with After Effects animations overlaid on the speaker, an original soundtrack, and a Premiere Pro edit that structures each video into three segments. Each runs 75–90 minutes. The production choices were deliberate: game theory has a reputation for being dry, and the goal was to make the lectures engaging enough that students would actually watch them and arrive at class ready to work.\n\n\n\n\nProblem sets\nThe course has 14 problem sets, one per lecture. Rather than posing game-theoretic problems in the abstract, every problem set is set in an original fictional world — Geneseo, a continent with its own states, political factions, history, and geography — that develops over the arc of the course. Each problem set introduces a new episode in Geneseo’s politics and asks students to apply the tools from the corresponding lecture to understand it. The narrating voice is Socrates.\nThe world-building is pedagogically intentional. Students engage more carefully with a problem when its stakes feel coherent, and a persistent setting accumulates enough shared context that later problem sets can introduce genuine strategic complexity without losing the thread.\nSyllabus · Sample problem set"
+    "objectID": "portfolio/shadow/index.html#overview",
+    "href": "portfolio/shadow/index.html#overview",
+    "title": "Shadow of Intervention",
+    "section": "Overview",
+    "text": "Overview\nA growing body of theory predicts that anticipated third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. Yet no existing measure of expected intervention covers the full population of potential interveners, varies annually with shifting alliances and foreign policy alignments, and treats intervention direction (government-biased vs. opposition-biased) as the primary quantity of interest.\nThis project constructs such a measure and uses it to test the hypothesis that the shadow of intervention shapes civil war onset."
   },
   {
-    "objectID": "teaching-portfolio/index.html#ps-398-strategic-international-relations",
-    "href": "teaching-portfolio/index.html#ps-398-strategic-international-relations",
-    "title": "Teaching Portfolio",
-    "section": "PS 398: Strategic International Relations",
-    "text": "PS 398: Strategic International Relations\nPS 398 is an upper-division seminar on formal models in international relations. The structure differs from PS 231: three long problem sets rather than 14 short ones, set in the same Geneseo world but developed more slowly, interleaved with readings from the IR literature. A shorter video series delivers the formal content asynchronously; synchronous sessions are split between problem-solving and structured paper discussion.\nSyllabus · Sample problem set · Notes"
+    "objectID": "portfolio/shadow/index.html#the-construction",
+    "href": "portfolio/shadow/index.html#the-construction",
+    "title": "Shadow of Intervention",
+    "section": "The construction",
+    "text": "The construction\nThe core contribution is a two-stage learned-proxy design:\nStage 1 — Prediction. A machine-learning ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural form earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.\nStage 2 — Aggregation. Dyad-level predictions are aggregated across all potential interveners to produce a country-year shadow, disciplined by a Nash fixed-point condition requiring each state’s predicted probability to be self-consistent as an input to the others’ predictions. The fixed-point is computationally tractable under the separability assumption that the opposition’s payoff is additive across interveners.\nThe resulting measures — expected government-biased intervention and expected opposition-biased intervention — are tested in a standard country-year onset framework. Government-biased intervention deters onset; opposition-biased intervention encourages it. The directional pattern holds across specifications, measurement draws, and a country fixed-effects estimator."
   },
   {
-    "objectID": "teaching-portfolio/index.html#phd-instruction",
-    "href": "teaching-portfolio/index.html#phd-instruction",
-    "title": "Teaching Portfolio",
-    "section": "PhD instruction",
-    "text": "PhD instruction\nDoctoral advising and methods instruction at UIUC and FSU in formal theory and quantitative methods, primarily in one-on-one and small-group settings. Traditional in format."
+    "objectID": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
+    "href": "portfolio/shadow/index.html#honest-accounting-of-uncertainty",
+    "title": "Shadow of Intervention",
+    "section": "Honest accounting of uncertainty",
+    "text": "Honest accounting of uncertainty\nThe learned-proxy approach has well-documented pitfalls, catalogued by Knox et al. (2022): measurement-stage uncertainty is routinely ignored, proxy quality is asserted rather than tested, and the disconnect between prediction and inference is papered over. This project follows their recommendations closely.\nMeasurement uncertainty is propagated into Stage 2 via a two-stage pairs cluster bootstrap that averages across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage rather than the regression. The shadow subsumes both leading existing proxies and carries out-of-sample predictive content."
   },
   {
-    "objectID": "portfolio/index.html",
-    "href": "portfolio/index.html",
-    "title": "Portfolio",
+    "objectID": "portfolio/shadow/index.html#resources",
+    "href": "portfolio/shadow/index.html#resources",
+    "title": "Shadow of Intervention",
+    "section": "Resources",
+    "text": "Resources\n\nPaper — full manuscript"
+  },
+  {
+    "objectID": "portfolio/generals/index.html",
+    "href": "portfolio/generals/index.html",
+    "title": "Six’s Generals",
     "section": "",
-    "text": "Projects in quantitative methods, data infrastructure, and sports analytics.\n\n\n\nCF Range\nParametric range estimation for center fielders, 2021–2024\nEach fielder gets a catchability ellipse fit to Statcast fly-ball outcomes via Stan. Four parameters capture lateral speed, depth speed, starting position, and charge asymmetry. Two statistics derived from one model, each designed for a different decision: opportunity-weighted range for free-agent evaluation, spectacular play probability for late-inning substitutions.\nBayesian inference Stan Statcast Baseball analytics\n\nProject page · GitHub\n\n\n\n\n\nD-SOCIAL-KLD\nDynamic corporate social responsibility scores, 1991–2018\nKLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years.\nBayesian inference IRT Stan R\n\nProject page · GitHub · Paper\n\n\n\n\n\nSix’s Generals\nDigitizing 2,206 Napoleonic-era military biographies\nGeorges Six’s Dictionnaire biographique (1934) contains structured biographical entries for every general and admiral of Revolutionary and Imperial France. This project builds a pipeline to convert Six’s semicolon-delimited prose into a machine-readable panel dataset, then uses it to examine promotion dynamics, battlefield careers, and the imperial honor economy.\nNLP / OCR Data pipeline Python Military history\n\nProject page · GitHub · Pipeline doc · Analysis\n\n\n\n\n\nShadow of Intervention\nMeasuring anticipated third-party intervention in civil wars\nTheory predicts that expected outside intervention shapes the decision to rebel, but no existing measure covers the full population of potential interveners. This project constructs one using a two-stage learned-proxy design: a machine-learning ensemble predicts intervention probabilities for every directed dyad-year; predictions are aggregated to a country-year shadow disciplined by a Nash fixed-point condition.\nMachine learning Causal inference Civil conflict Measurement\n\nProject page · GitHub · Paper"
+    "text": "A data pipeline and quantitative analysis of French Revolutionary and Napoleonic military careers"
+  },
+  {
+    "objectID": "portfolio/generals/index.html#overview",
+    "href": "portfolio/generals/index.html#overview",
+    "title": "Six’s Generals",
+    "section": "Overview",
+    "text": "Overview\nBetween 1789 and 1815, France transformed its army root and branch. The Old Regime had structured military careers by seniority, lineage, and the venal sale of offices; the Revolution dissolved those structures wholesale. Careers that had taken a generation to advance compressed into years. Whether a man broke into the officer corps — and how quickly he rose once inside — depended less on birth than on the timing of his entry into service and on what the Republic needed from him that week.\nThese dynamics survive in extraordinary detail in Georges Six’s Dictionnaire biographique des généraux et amiraux français de la Révolution et de l’Empire (1934), a two-volume work containing biographical entries for 2,206 generals and admirals. Each entry is a compact chronological record — rank promotions, unit assignments, campaign participations, wounds, honors — set down clause by clause in a consistent semicolon-delimited prose style. The dictionary is, in effect, a longitudinal panel dataset in prose form.\nThis project consists of two companion pieces:\nThe pipeline converts Six’s prose into structured, machine-readable data. It covers digitization via OCR, page-level cleaning, entry assembly across page boundaries, entry enrichment (errata, cross-references, date propagation), and clause-by-clause parsing into typed biographical events.\nThe quantitative introduction uses the resulting dataset to examine eight questions: how rank structures worked and how fast careers moved; where generals came from; which battles mattered most and how they clustered; how unit assignments and career roles were distributed; what post-career provisions looked like; and how the imperial honor economy functioned — both as an institution and as a response to individual battlefield performance."
+  },
+  {
+    "objectID": "portfolio/generals/index.html#selected-findings",
+    "href": "portfolio/generals/index.html#selected-findings",
+    "title": "Six’s Generals",
+    "section": "Selected findings",
+    "text": "Selected findings\n\nPromotion times at every rank level collapsed during the Revolution (median ~1 year per step), partially recovered under the Empire (~4 years), but never returned to Old Regime pace (~5–6 years). The shift is over-determined: seniority rules abolished, army expanded from 180K to 700K men, performance displacing birth as the criterion for advancement.\nThere is essentially no individual “momentum” in promotion speed within eras (r = 0.003), with one exception: a within-Revolution correlation of r = 0.13 suggests modest merit-selection even inside the accelerated environment.\nThe Arc de Triomphe inscriptions are not a representative sample of the war’s battles — they systematically over-represent engagements where Napoleon was personally present."
+  },
+  {
+    "objectID": "portfolio/generals/index.html#resources",
+    "href": "portfolio/generals/index.html#resources",
+    "title": "Six’s Generals",
+    "section": "Resources",
+    "text": "Resources\n\nData pipeline — OCR, cleaning, entry assembly, clause parsing\nQuantitative introduction — career dynamics, geography, battles, honors\n\n\nDataset available on request."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "I’m a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.\n\n\nEmail: rjc AT illinois dot edu\n\n\n\n\nFighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations\n\n\n\n\n\nStrategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016.\n\n\n\n\n\nLectures for undergraduate game theory course"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Email: rjc AT illinois dot edu"
+  },
+  {
+    "objectID": "index.html#working-papers",
+    "href": "index.html#working-papers",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Fighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations"
+  },
+  {
+    "objectID": "index.html#published-work",
+    "href": "index.html#published-work",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016."
+  },
+  {
+    "objectID": "index.html#teaching-materials",
+    "href": "index.html#teaching-materials",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Lectures for undergraduate game theory course"
   },
   {
     "objectID": "portfolio/csr/index.html",
@@ -53,14 +116,14 @@
     "href": "portfolio/csr/index.html#the-model",
     "title": "D-SOCIAL-KLD",
     "section": "The model",
-    "text": "The model\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\]\n\n\\(\\theta_{it}\\): latent CSR score for firm \\(i\\) in year \\(t\\)\n\\(\\alpha_{jt}\\): difficulty of indicator \\(j\\) in year \\(t\\)\n\\(\\beta_{jt}\\): discrimination of indicator \\(j\\) in year \\(t\\)\nYear-to-year dynamics: \\(\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot \\varepsilon\\)\n\nEstimation uses Stan’s No-U-Turn Sampler with a non-centered parameterization for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior."
+    "text": "The model\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\]\n\n\\(\\theta_{it}\\): latent CSR score for firm \\(i\\) in year \\(t\\)\n\\(\\alpha_{jt}\\): difficulty of indicator \\(j\\) in year \\(t\\)\n\\(\\beta_{jt}\\): discrimination of indicator \\(j\\) in year \\(t\\)\nYear-to-year dynamics: \\(\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot \\varepsilon\\)\n\nEstimation uses Stan’s No-U-Turn Sampler with a non-centered parameterization for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior. The full model (~120K parameters) runs 4 chains for 3,500 iterations each, completing in approximately 3 days with zero divergent transitions."
   },
   {
     "objectID": "portfolio/csr/index.html#data",
     "href": "portfolio/csr/index.html#data",
     "title": "D-SOCIAL-KLD",
     "section": "Data",
-    "text": "Data\n\nSource: KLD STATS, 1991–2018, via Wharton Research Data Services\nCoverage: ~6,300 unique firms; 2,000+ indicator-year items; ~1.5M non-missing observations\nUniverse: firms present in the KLD database by 2012 (for comparability with published scores)"
+    "text": "Data\n\nSource: KLD STATS, 1991–2018, via Wharton Research Data Services\nCoverage: ~6,300 unique firms; 2,068 indicator-year items; 3.3M non-missing observations across 51,586 firm-years\nUniverse: firms present in the KLD database by 2012 (for comparability with published scores)"
   },
   {
     "objectID": "portfolio/csr/index.html#outputs",
@@ -74,174 +137,13 @@
     "href": "portfolio/csr/index.html#resources",
     "title": "D-SOCIAL-KLD",
     "section": "Resources",
-    "text": "Resources\n\nPublished paper — Carroll, Primo & Richter (2016), Strategic Management Journal\nMethodology document — model specification, estimation details, and implementation notes\nGitHub repository — code and replication materials\n\n\nFull draws will be made available at socialscores.org."
+    "text": "Resources\n\nPublished paper — Carroll, Primo & Richter (2016), Strategic Management Journal\nMethodology document — model specification, estimation details, and implementation notes\n\n\nCode and data available on request. Full draws will be made available at socialscores.org."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Robert J. Carroll",
+    "objectID": "portfolio/index.html",
+    "href": "portfolio/index.html",
+    "title": "Portfolio",
     "section": "",
-    "text": "I’m a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.\n\n\nEmail: rjc AT illinois dot edu\n\n\n\n\nFighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations\n\n\n\n\n\nStrategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016.\n\n\n\n\nPS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Sample lecture notes"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Email: rjc AT illinois dot edu"
-  },
-  {
-    "objectID": "index.html#working-papers",
-    "href": "index.html#working-papers",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Fighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations"
-  },
-  {
-    "objectID": "index.html#published-work",
-    "href": "index.html#published-work",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016."
-  },
-  {
-    "objectID": "index.html#teaching",
-    "href": "index.html#teaching",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "PS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Sample lecture notes"
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html",
-    "href": "portfolio/baseball-range/index.html",
-    "title": "CF Range",
-    "section": "",
-    "text": "Parametric range model for center fielders, fit to Statcast fly-ball data — sequential Bayesian updating across seasons, two decision-relevant statistics derived from one model\n“Best” depends on the question. A fielder optimized for late-inning substitutions isn’t necessarily the one you sign as a free agent. This project builds a model of CF range and derives two statistics from it, each designed for a different front-office decision."
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#the-model",
-    "href": "portfolio/baseball-range/index.html#the-model",
-    "title": "CF Range",
-    "section": "The model",
-    "text": "The model\nEach fielder gets a catchability ellipse that scales with hang time. Four per-player parameters define their range.\nStarting position \\(y_{0,i}\\) — the fielder’s actual pre-play depth, estimated from catch/no-catch outcomes rather than assumed fixed. The adjusted displacement is \\(\\Delta y_\\text{adj} = \\Delta y - y_{0,i}\\).\nAsymmetric depth speed — fielders charge better than they retreat. A smooth asymmetry factor \\(\\gamma_i\\) stretches the forward half of the ellipse:\n\\[w = \\sigma\\!\\left(\\frac{-\\Delta y_\\text{adj}}{5}\\right), \\quad b_\\text{eff} = b_i \\exp(\\log \\gamma_i \\cdot w)\\]\nwhere \\(w \\approx 1\\) on balls in front of the fielder and \\(\\approx 0\\) behind. The normalized distance and catch probability are then:\n\\[d_i = \\sqrt{\\left(\\frac{\\Delta x}{a_i \\tau}\\right)^2 + \\left(\\frac{\\Delta y_\\text{adj}}{b_{\\text{eff},i}\\, \\tau}\\right)^2}, \\qquad P(\\text{catch}) = \\sigma(\\beta_0 - \\beta_1 d_i)\\]\nThe four parameters \\((a_i, b_i, y_{0,i}, \\gamma_i)\\) — lateral speed, depth speed, starting depth, and charge asymmetry — define each player’s range. Hang time is derived from launch speed and launch angle via \\(\\tau = 2v_0\\sin\\theta/g\\).\nWhy this matters. Diagnosing the original two-parameter model on 2021–2024 data found systematic overprediction on charging plays (sectors 225–315°, mean residual −0.062) and significant spatial autocorrelation in 32 of 35 qualified players. Root cause: fielders play considerably deeper than the assumed 310 ft — the v2.0 model estimates a population-average starting depth of ~353 ft. The fixed-origin model conflated range with positioning. Introducing \\(y_{0,i}\\) reduces the charging zone residual from −0.062 to −0.0002, leaving \\((a_i, b_i, \\gamma_i)\\) as clean speed estimates from the player’s actual location."
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#two-statistics-two-decisions",
-    "href": "portfolio/baseball-range/index.html#two-statistics-two-decisions",
-    "title": "CF Range",
-    "section": "Two statistics, two decisions",
-    "text": "Two statistics, two decisions\n\\((a_i, b_i)\\) are the parameters. The decision determines the estimand.\nReliable range weights each player’s range by where balls are actually hit. A play is in \\(R_i\\) if the full posterior puts \\(P(\\text{catch}) \\geq 0.80\\) in at least 80% of samples — high probability and high confidence:\ndef opportunity_weighted_range(player, all_fly_balls):\n    # A play is \"reliably covered\" if ≥80% of posterior samples\n    # give P(catch) ≥ 0.80\n    in_range = fraction_above_threshold(player.posterior, fly_ball) &gt;= 0.80\n    return in_range.mean()\nSpectacular play probability isolates performance in the thin-coverage zone — balls outside most fielders’ reliable ranges, where only the best CFs make plays:\ndef spectacular_play_prob(player, fly_balls, spectacular_zone):\n    hard_plays = fly_balls[spectacular_zone]\n    # Use full posterior mean — actual expected performance on hard plays\n    return catch_prob(player.a_mean, player.b_mean, hard_plays).mean()\nThe two stats can rank players differently. A player with elite straight-back range racks up opportunity-weighted range. A player who makes diving plays in the gaps earns spectacular play probability.\n\n\n\nDecision\nStatistic\n\n\n\n\nFree agent evaluation\nOpportunity-weighted reliable range\n\n\nLate-inning substitution\nSpectacular play probability\n\n\nPark fit\nShape of \\(R_i\\), not just size\n\n\n\n\nReading the parameters\nThe model outputs \\((a_i, b_i, y_{0,i}, \\gamma_i)\\); several derived quantities make them interpretable.\nEllipse area at hang time \\(\\tau\\) is \\(\\pi a b \\tau^2\\) — the coverage footprint in square feet. At \\(\\tau = 5\\) seconds (a long fly ball), the 2021 median qualified CF covers about 23,300 sq ft. The best cover roughly 29,700 sq ft — 27% more ground, a gap comparable in size to a baseball diamond.\nMarginal plays per season. The difference in opportunity-weighted range between two players, multiplied by the ~425 CF fly-ball opportunities per team slot per season, converts the statistic into a concrete defensive volume. In 2021, Harrison Bader’s range advantage over the median CF translates to roughly +34 plays per season; Michael Taylor’s to +26. A 0.03 difference in opportunity-weighted range is approximately 13 additional plays per season.\nShape ratio \\(a/b\\) characterizes the type of range independent of total size. Most qualified CFs fall between 1.5–2.0, reflecting that lateral movement is generally faster than depth movement. But the extremes are informative: Tyler Naquin (\\(a/b \\approx 2.2\\)) is strongly lateral-dominant — large total ellipse, but well below-median opportunity-weighted range because his coverage shape does not match where CF fly balls actually land. Yonathan Daza (\\(a/b \\approx 1.3\\)) runs the opposite pattern: modest total area but ranked in the top 3 for spectacular play probability, driven by unusual depth range.\nStarting depth \\(y_{0,i}\\) is the player’s inferred pre-play position. A positive offset means the player typically positions deeper than 310 ft; negative means shallower. This absorbs the systematic overprediction on charging plays that afflicted the v1.0 model and makes \\((a_i, b_i)\\) interpretable as pure speed estimates from the player’s actual location.\nCharge asymmetry \\(\\gamma_i\\) is the ratio of effective depth speed going in versus going back. \\(\\gamma_i &gt; 1\\) means the fielder is faster charging than retreating. The population prior is centered at \\(\\gamma = 1\\) — the data drives any departure, and the hierarchical structure prevents sparse-data players from getting extreme estimates.\nBader vs. Bradley (2021) shows how the shape decomposition works in practice. Both players have nearly identical lateral reach (~125 ft at \\(\\tau = 5\\) s). The entire gap between them — Bader’s ellipse is 13.6% larger — comes from depth: Bader reaches 75 ft deep versus Bradley’s 65 ft. Ten feet of additional depth range, compounded over a full season, accounts for roughly +26 plays."
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#bayesian-pipeline",
-    "href": "portfolio/baseball-range/index.html#bayesian-pipeline",
-    "title": "CF Range",
-    "section": "Bayesian pipeline",
-    "text": "Bayesian pipeline\nThe full implementation uses Stan with sequential season-to-season updating. Rather than re-estimating from scratch each year, each player’s prior for a new season is their previous season’s posterior, inflated by a factor \\(\\lambda\\) to allow for year-to-year change:\n\\[\\sigma_{\\text{prior}} = \\lambda \\cdot \\sigma_{\\text{posterior}}, \\quad \\lambda = 1.25\\]\nThis encodes a sensible belief: a player’s range next year is probably similar to this year’s, but not identical. New players receive the population hyperparameters as their prior. The result:\n\nPlayers with few opportunities are pulled toward the population mean (shrinkage)\nPlayers with many opportunities are barely affected — the data overwhelms the prior\nAs data accumulates through a season, credible bands on \\((a_i, b_i)\\) narrow visibly\n\nBurn-in (2017–2020): fit cf_range_v2.stan once to estimate population hyperparameters \\((\\mu_a, \\sigma_a, \\mu_b, \\sigma_b, \\mu_{y_0}, \\sigma_{y_0}, \\mu_{\\log\\gamma}, \\sigma_{\\log\\gamma})\\) and logistic shape \\((\\beta_0, \\beta_1)\\).\nSequential updates (2021–2024): fit cf_range_update_v2.stan each season, passing all eight per-player prior parameters as data. \\(\\beta_0, \\beta_1\\) are fixed at burn-in posterior means — re-estimating them from a single season would be poorly identified.\nThe Bayesian reliable range \\(R_i\\) uses the full posterior: a play is included if at least 80% of posterior samples give \\(P(\\text{catch}) \\geq 0.80\\). Thin-data players get a smaller \\(R_i\\) because their wider posterior makes fewer plays reliably covered; as data accumulates through a season, the credible band narrows and \\(R_i\\) stabilizes."
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#part-2-optimal-positioning",
-    "href": "portfolio/baseball-range/index.html#part-2-optimal-positioning",
-    "title": "CF Range",
-    "section": "Part 2: Optimal positioning",
-    "text": "Part 2: Optimal positioning\nKnowing who has the best range answers one question. A different question: given the fielder you have, where should you put him?\nFor each batter, Statcast gives us a spray distribution of CF fly-ball landing spots. Given a fielder’s four parameters and that distribution, the optimal pre-pitch starting position is:\n\\[(\\hat{x}_0, \\hat{y}_0) = \\underset{x_0, y_0}{\\arg\\max} \\; \\mathbb{E}[\\text{coverage} \\mid x_0, y_0, f_{\\text{batter}}, a_i, b_i, \\gamma_i]\\]\nBecause \\(y_{0,i}\\) is already estimated by the model, the optimizer shifts from the player’s inferred actual baseline rather than an assumed canonical depth. The answer depends on both the fielder’s range shape and the batter — a depth-dominant fielder may shade differently than a lateral-dominant peer facing the same pull hitter. The same framework quantifies the value of shifting: how much coverage does moving 15 ft gain, and for which fielder-batter pairs does positioning matter most?"
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#further-extensions",
-    "href": "portfolio/baseball-range/index.html#further-extensions",
-    "title": "CF Range",
-    "section": "Further extensions",
-    "text": "Further extensions\nAge curve on the prior mean. The sequential update currently assumes “next year = this year” as the baseline. A better motion law shifts the prior mean along a population-level age curve — estimated hierarchically from all players simultaneously. A 27-year-old’s prior for next season is slightly better than their current posterior; a 33-year-old’s is slightly worse. The variance inflation λ captures off-season uncertainty on top of the age trend. This is well-suited to a hierarchical model: individual aging curves are unidentifiable from a handful of seasons per player, but the population curve is estimable from the full panel.\nSuperellipse boundary. The ellipse (\\(p=2\\)) assumes full directional coupling — lateral and depth movement compete for the same time budget. The superellipse \\(d = \\bigl(|\\Delta x / a\\tau|^p + |\\Delta y_\\text{adj} / b_\\text{eff}\\tau|^p\\bigr)^{1/p}\\) relaxes this with a single additional parameter. The empirical test: rerun spatial autocorrelation (Moran’s I) on v2.0 residuals. If the clustering disappears once the positional confound is absorbed, the ellipse is adequate. If a symmetric residual pattern emerges at the 45° diagonals, \\(p &gt; 2\\) is indicated.\nDiagonal asymmetry. A correlation parameter \\(\\rho\\) in the distance metric yields a tilted ellipse whose principal axes rotate away from field coordinates, capturing directional preferences (natural glide paths, handedness) that \\((a, b, \\gamma)\\) cannot express. Worth adding if per-quadrant residual decomposition on high-data players shows systematic diagonal structure after v2.0.\nMeasurement uncertainty. Statcast landing coordinates carry ~1–2 ft of tracking error. Marginalizing over this with Gaussian quadrature rather than treating each coordinate as exact is a principled correction with negligible runtime cost.\nEnvironmental covariates. Wind is the largest omitted variable. The natural correction is to adjust observed displacements for wind before fitting the model."
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#validation",
-    "href": "portfolio/baseball-range/index.html#validation",
-    "title": "CF Range",
-    "section": "Validation",
-    "text": "Validation\nTwo external checks ground the model in data beyond what was used to fit it.\nOAA correlation. Statcast Outs Above Average (OAA) is an independent tracking-based metric derived from actual fielder routes, not catch/no-catch outcomes. Spearman \\(\\rho(\\text{OWR}, \\text{OAA})\\) is +0.18 to +0.33 across seasons — consistently positive and mostly significant. An additional check: the directional OAA decomposition (In vs Back zones) provides an independent signal on \\(\\gamma_i\\). Players with higher charge asymmetry in the model show a higher share of their OAA coming from “In” plays: \\(\\rho(\\gamma, \\text{OAA In-fraction}) = +0.17\\) pooled across seasons (\\(p = 0.001\\)).\nStarting position face validity. Because Statcast does not publish pre-play fielder coordinates in its public API, direct validation of \\(y_{0,i}\\) against observed positions is not feasible. Three indirect checks: (1) the population mean of \\(y_{0,i}\\) is +43 ft — the model infers fielders position at ~353 ft on average, deeper than the canonical 310 ft reference, consistent with typical CF fly-ball territory; (2) relative rankings pass a face-validity check — Brenton Doyle ranks among the deepest (Coors Field, thin air), Corbin Carroll and Byron Buxton among the shallowest (aggressive, speed-first positioning); and (3) plays under “Strategic” outfield alignment show higher RMSE than “Standard” plays (0.293 vs 0.265), confirming that the model fits worse precisely where its typical-positioning assumption is least valid.\n\n\nCharge asymmetry (\\(\\gamma_i\\)) vs directional OAA — players with higher model-estimated charge asymmetry earn a larger share of their defensive value from “In” plays:"
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#results",
-    "href": "portfolio/baseball-range/index.html#results",
-    "title": "CF Range",
-    "section": "Results",
-    "text": "Results\nv2.0 diagnostic summary. The charging zone residual dropped from −0.062 to −0.0002 (FIXED). Boundary calibration improved from a +0.160 gap to +0.063 (PARTIAL). Year-over-year correlations are stable and improving as the sequential prior chain accumulates (OWR \\(\\rho\\) = 0.69–0.85, \\(b\\) \\(\\rho\\) = 0.72–0.94 across adjacent seasons). The \\(\\sigma_\\text{transition}\\) test finds no signal for a v3.0 state-space model — estimation noise dominates the year-to-year differences at current data volume.\nDirectional residuals and spatial autocorrelation — the key v1.0 pathologies:\n\n\n\n\nYear-over-year parameter stability across adjacent seasons:\n\n\nRankings by opportunity-weighted reliable range, 2021–2024:\n\n\nPosterior catch probability for the top-ranked CF — dashed contour is the posterior-mean ellipse boundary, semi-transparent ellipses are individual posterior samples:\n\n\nCoverage across the outfield — how many qualified CFs have reliable range at each location. Dark spots are the spectacular zone:\n\n\nWithin-season evolution for 2024 — credible bands narrow as data accumulates through the year:"
-  },
-  {
-    "objectID": "portfolio/baseball-range/index.html#resources",
-    "href": "portfolio/baseball-range/index.html#resources",
-    "title": "CF Range",
-    "section": "Resources",
-    "text": "Resources\n\nGitHub — full code, model, and data pipeline"
-  },
-  {
-    "objectID": "portfolio/generals/index.html",
-    "href": "portfolio/generals/index.html",
-    "title": "Six’s Generals",
-    "section": "",
-    "text": "A data pipeline and quantitative analysis of French Revolutionary and Napoleonic military careers\nBetween 1789 and 1815, France transformed its army root and branch. The Old Regime had promoted officers by seniority and birth; the Revolution abolished those rules wholesale. Georges Six’s Dictionnaire biographique des généraux et amiraux français de la Révolution et de l’Empire (1934) records the result in extraordinary detail: 2,206 biographical entries, each a semicolon-delimited series of rank promotions, unit assignments, campaigns, wounds, and honors. The dictionary is, in effect, a longitudinal panel dataset in prose form.\nThis project converts Six’s prose into structured data and uses it to examine how military careers actually moved."
-  },
-  {
-    "objectID": "portfolio/generals/index.html#promotion-speed-across-eras",
-    "href": "portfolio/generals/index.html#promotion-speed-across-eras",
-    "title": "Six’s Generals",
-    "section": "Promotion speed across eras",
-    "text": "Promotion speed across eras\n\n\n\nMedian years between consecutive single-step promotions, by rank and era. Green = fast; red = slow. Cells with fewer than five observations are blank.\n\n\nPromotion times at every level of the hierarchy collapsed during the Revolution — the pre-Revolutionary median of roughly five years per step fell to about one year — then partially recovered under the Empire to roughly four years. The mechanism is over-determined: seniority rules abolished, the army expanding from 180,000 to over 700,000 men, performance displacing birth as the criterion for advancement. The data cannot separate these causes, but the scale of the shift is unambiguous.\nOne implication: if the Revolution was a structural shock, individual variation in promotion speed should be mostly noise. And it is. The correlation between consecutive wait times for the same general in the same era is r = 0.003 (p = 0.92) — the Revolution lifted all boats equally. The one exception is a within-Revolution correlation of r = 0.13 (p = 0.001), consistent with a modest merit-selection signal even within the accelerated environment."
-  },
-  {
-    "objectID": "portfolio/generals/index.html#the-pipeline",
-    "href": "portfolio/generals/index.html#the-pipeline",
-    "title": "Six’s Generals",
-    "section": "The pipeline",
-    "text": "The pipeline\nSix’s dictionary exists only as a poor-quality scan of a 1934 print publication. Converting it to structured data required building a full digitization pipeline from scratch.\nThe core challenges were not OCR — Marker handles the French text well — but structural. Six’s entries do not respect page boundaries: most pages begin mid-entry, and roughly half of all entries span two or more pages. The entry assembler detects boundaries using a two-pass regex strategy (ALL-CAPS surnames followed by parenthetical first-name blocks, with a fallback mixed-case pass for entries Six flagged as provisional), then stitches fragments across consecutive pages. Thirty-one pages required targeted manual corrections after automated assembly, each documented in the source.\nOnce assembled, each entry’s biographical prose is segmented into clauses and classified by type — rank promotion, unit assignment, campaign, honor, wound, administrative event — using a rule-based classifier tuned to Six’s consistent semicolon-delimited vocabulary. The classifier achieves a 13% residual unknown rate, down from 42% in its initial iteration, with no single unclassified pattern accounting for more than ~10 clauses.\nOutput: 2,208 biographical entries · 88,282 classified clauses · 52-column rectangular export"
-  },
-  {
-    "objectID": "portfolio/generals/index.html#further-analysis",
-    "href": "portfolio/generals/index.html#further-analysis",
-    "title": "Six’s Generals",
-    "section": "Further analysis",
-    "text": "Further analysis\nThe structured dataset supports a range of additional questions covered in the full analysis document: geographic origins of the officer corps; Arc de Triomphe inscriptions and their relationship to Napoleon’s personal presence at engagements; army assignments and career roles; post-career pensions; and the imperial honor economy."
-  },
-  {
-    "objectID": "portfolio/generals/index.html#resources",
-    "href": "portfolio/generals/index.html#resources",
-    "title": "Six’s Generals",
-    "section": "Resources",
-    "text": "Resources\n\nGitHub — code, data, and documentation\nPipeline documentation — OCR, cleaning, entry assembly, clause parsing\nQuantitative introduction — career dynamics, geography, battles, honors\n\nA companion scholarly paper is in preparation."
-  },
-  {
-    "objectID": "portfolio/shadow/index.html",
-    "href": "portfolio/shadow/index.html",
-    "title": "Shadow of Intervention",
-    "section": "",
-    "text": "A learned-proxy measure of anticipated third-party intervention in civil conflicts\nTheory predicts that anticipated third-party intervention shapes the calculus of rebellion — expected outside support can deter governments from repression or embolden opposition groups to fight. But no existing measure covers the full population of potential interveners, varies annually with shifting foreign policy alignments, or distinguishes government-biased from opposition-biased intervention. This project constructs one and uses it to test whether the shadow of intervention shapes civil war onset."
-  },
-  {
-    "objectID": "portfolio/shadow/index.html#the-measure-in-practice",
-    "href": "portfolio/shadow/index.html#the-measure-in-practice",
-    "title": "Shadow of Intervention",
-    "section": "The measure in practice",
-    "text": "The measure in practice\n\n\n\nGovernment-biased (\\(E^G\\), solid) and opposition-biased (\\(E^O\\), dashed) intervention expectations for five countries, 1946–2014. Shaded bands mark civil war years.\n\n\nThe time series shows the measure behaving as theory predicts: intervention expectations vary meaningfully across countries and across time, tracking foreign policy realities rather than static structural features. Afghanistan’s government-side shadow spikes with Soviet involvement and again with post-2001 NATO presence; Angola’s opposition-side shadow rises sharply through its long civil conflict; Egypt shows asymmetric exposure across eras.\nThe regression result is clean in both direction and asymmetry: expected government intervention reduces civil war onset (coef = −2.39, SE = 0.53), expected opposition intervention increases it (coef = +1.69, SE = 0.54). The shadow subsumes both leading existing proxies and carries independent out-of-sample predictive content."
-  },
-  {
-    "objectID": "portfolio/shadow/index.html#construction",
-    "href": "portfolio/shadow/index.html#construction",
-    "title": "Shadow of Intervention",
-    "section": "Construction",
-    "text": "Construction\nThe measure is built in two stages.\nStage 1 — Prediction. A super learner ensemble trained on the Regan (2000) dataset of military interventions (1946–2014) predicts, for each directed dyad in a given year, the probability and direction of intervention. The ensemble includes flexible nonparametric methods alongside the structural functional form implied by existing game-theoretic models; the structural model earns less than 1% of ensemble weight, meaning the data strongly prefer nonparametric alternatives.\nStage 2 — Aggregation. Dyad-level predictions are aggregated across all potential interveners to a country-year shadow, disciplined by a Nash fixed-point condition requiring each state’s predicted probability to be consistent as an input to the others’ predictions. The fixed-point is computationally tractable under a separability assumption; convergence is confirmed across all 25 imputation draws."
-  },
-  {
-    "objectID": "portfolio/shadow/index.html#uncertainty",
-    "href": "portfolio/shadow/index.html#uncertainty",
-    "title": "Shadow of Intervention",
-    "section": "Uncertainty",
-    "text": "Uncertainty\nThe learned-proxy approach has well-documented pitfalls: measurement-stage uncertainty is routinely ignored, and the disconnect between prediction and inference is papered over. This project follows Knox et al. (2022) closely. Measurement uncertainty is propagated into the regression via a two-stage pairs cluster bootstrap averaging across 25 imputation draws. The corrected standard errors are roughly 2.9–3.5× larger than naïve MLE output; approximately 88–92% of total coefficient variance originates in the measurement stage, not the regression. Standard errors that ignore this are not just conservative — they are wrong by a factor of three."
-  },
-  {
-    "objectID": "portfolio/shadow/index.html#resources",
-    "href": "portfolio/shadow/index.html#resources",
-    "title": "Shadow of Intervention",
-    "section": "Resources",
-    "text": "Resources\n\nGitHub — code and data\nPaper — full manuscript"
+    "text": "Three projects in quantitative methods and data infrastructure for social science research.\n\n\n\nD-SOCIAL-KLD\nDynamic corporate social responsibility scores, 1991–2018\nKLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years.\nBayesian inference IRT Stan R\n\nProject page · Paper\n\n\n\n\n\nSix’s Generals\nDigitizing 2,206 Napoleonic-era military biographies\nGeorges Six’s Dictionnaire biographique (1934) contains structured biographical entries for every general and admiral of Revolutionary and Imperial France. This project builds a pipeline to convert Six’s semicolon-delimited prose into a machine-readable panel dataset, then uses it to examine promotion dynamics, battlefield careers, and the imperial honor economy.\nNLP / OCR Data pipeline Python Military history\n\nProject page · GitHub · Pipeline doc · Analysis\n\n\n\n\n\nShadow of Intervention\nMeasuring anticipated third-party intervention in civil wars\nTheory predicts that expected outside intervention shapes the decision to rebel, but no existing measure covers the full population of potential interveners. This project constructs one using a two-stage learned-proxy design: a machine-learning ensemble predicts intervention probabilities for every directed dyad-year; predictions are aggregated to a country-year shadow disciplined by a Nash fixed-point condition.\nMachine learning Causal inference Civil conflict Measurement\n\nProject page · Paper"
   }
 ]

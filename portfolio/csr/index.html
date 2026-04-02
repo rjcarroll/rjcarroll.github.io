@@ -198,13 +198,13 @@ y_{ijt} \sim \text{Bernoulli}\bigl(\Phi(\beta_{jt} \cdot \theta_{it} - \alpha_{j
 <li><span class="math inline">\(\beta_{jt}\)</span>: discrimination of indicator <span class="math inline">\(j\)</span> in year <span class="math inline">\(t\)</span></li>
 <li>Year-to-year dynamics: <span class="math inline">\(\theta_{i,t} = \theta_{i,t-1} + \sigma_{\text{firm},i} \cdot \varepsilon\)</span></li>
 </ul>
-<p>Estimation uses Stan’s No-U-Turn Sampler with a <strong>non-centered parameterization</strong> for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior.</p>
+<p>Estimation uses Stan’s No-U-Turn Sampler with a <strong>non-centered parameterization</strong> for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior. The full model (~120K parameters) runs 4 chains for 3,500 iterations each, completing in approximately 3 days with zero divergent transitions.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <ul>
 <li><strong>Source</strong>: KLD STATS, 1991–2018, via Wharton Research Data Services</li>
-<li><strong>Coverage</strong>: ~6,300 unique firms; 2,000+ indicator-year items; ~1.5M non-missing observations</li>
+<li><strong>Coverage</strong>: ~6,300 unique firms; 2,068 indicator-year items; 3.3M non-missing observations across 51,586 firm-years</li>
 <li><strong>Universe</strong>: firms present in the KLD database by 2012 (for comparability with published scores)</li>
 </ul>
 </section>
@@ -222,10 +222,9 @@ y_{ijt} \sim \text{Bernoulli}\bigl(\Phi(\beta_{jt} \cdot \theta_{it} - \alpha_{j
 <ul>
 <li><a href="https://doi.org/10.1002/smj.2463">Published paper</a> — Carroll, Primo &amp; Richter (2016), <em>Strategic Management Journal</em></li>
 <li><a href="methodology.html">Methodology document</a> — model specification, estimation details, and implementation notes</li>
-<li><a href="https://github.com/rjcarroll/d-social-kld">GitHub repository</a> — code and replication materials</li>
 </ul>
 <hr>
-<p><em>Full draws will be made available at socialscores.org.</em></p>
+<p><em>Code and data available on request. Full draws will be made available at socialscores.org.</em></p>
 
 
 </section>
