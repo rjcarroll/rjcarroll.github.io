@@ -41,6 +41,7 @@ Email: rjc AT illinois dot edu
 - [Using item response theory to improve measurement in strategic management research: An application to corporate social responsibility](https://doi.org/10.1002/smj.2463)
   (with [David Primo](https://www.sas.rochester.edu/psc/primo/) and [Brian Kelleher Richter](http://www.briankrichter.com/))
   *Strategic Management Journal* 37(1): 66–85. 2016.
+  [Updated scores & methodology](dsocialkld/) · [GitHub](https://github.com/rjcarroll/d-social-kld)
 
 ## Teaching
 
