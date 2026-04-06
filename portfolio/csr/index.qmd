@@ -45,7 +45,7 @@ Scores are interval-scaled and centered near zero in each year. Posterior uncert
 ## Resources
 
 - [Published paper](https://doi.org/10.1002/smj.2463) — Carroll, Primo & Richter (2016), *Strategic Management Journal*
-- [Methodology document](methodology.html) — model specification, estimation details, and implementation notes
+- [Methodology document](../../dsocialkld/) — model specification, estimation details, and implementation notes
 - [GitHub repository](https://github.com/rjcarroll/d-social-kld) — code and replication materials
 
 ---

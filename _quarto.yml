@@ -4,11 +4,12 @@ project:
   render:
     - "*.qmd"
     - "portfolio/**/*.qmd"
+    - "dsocialkld/*.qmd"
   resources:
     - CNAME
     - "*.pdf"
     - "*.png"
-    - "portfolio/csr/references.bib"
+    - "dsocialkld/references.bib"
 
 website:
   title: "Robert J. Carroll"
