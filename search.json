@@ -63,83 +63,6 @@
     "text": "Resources\n\nData pipeline — OCR, cleaning, entry assembly, clause parsing\nQuantitative introduction — career dynamics, geography, battles, honors\n\n\nDataset available on request."
   },
   {
-    "objectID": "portfolio/csr/index.html",
-    "href": "portfolio/csr/index.html",
-    "title": "D-SOCIAL-KLD",
-    "section": "",
-    "text": "Dynamic IRT scores for corporate social responsibility · 1991–2018 · with David Primo and Brian Kelleher Richter"
-  },
-  {
-    "objectID": "portfolio/csr/index.html#overview",
-    "href": "portfolio/csr/index.html#overview",
-    "title": "D-SOCIAL-KLD",
-    "section": "Overview",
-    "text": "Overview\nKLD STATS (now MSCI ESG) codes publicly traded U.S. firms on dozens of binary indicators each year — strengths and concerns across categories like environment, labor, governance, and community relations. The standard approach in the management literature is the KLD Index: sum the strengths and subtract the concerns. This treats every indicator as equally informative, which is a strong and usually implausible assumption.\nD-SOCIAL-KLD replaces the additive index with a dynamic two-parameter IRT model. The model treats firms as examinees and KLD indicators as test items. A discrimination parameter for each item lets the data decide how informative each indicator is; a difficulty parameter captures how demanding each indicator is at the population level. A firm-specific random walk prior links scores across years, encoding the intuition that a firm’s CSR position in 2006 is strongly predicted by its position in 2005.\nThe result is a posterior distribution over a latent CSR score \\(\\theta_{it}\\) for each firm-year — with uncertainty quantified, discrimination weights estimated from the data, and year-to-year dynamics modeled explicitly."
-  },
-  {
-    "objectID": "portfolio/csr/index.html#the-model",
-    "href": "portfolio/csr/index.html#the-model",
-    "title": "D-SOCIAL-KLD",
-    "section": "The model",
-    "text": "The model\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\]\n\n\\(\\theta_{it}\\): latent CSR score for firm \\(i\\) in year \\(t\\)\n\\(\\alpha_{jt}\\): difficulty of indicator \\(j\\) in year \\(t\\)\n\\(\\beta_{jt}\\): discrimination of indicator \\(j\\) in year \\(t\\)\nYear-to-year dynamics: \\(\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot \\varepsilon\\)\n\nEstimation uses Stan’s No-U-Turn Sampler with a non-centered parameterization for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior. The full model (~120K parameters) runs 4 chains for 3,500 iterations each, completing in approximately 3 days with zero divergent transitions and R-hat \\(\\leq\\) 1.004 across all spot-checked parameters."
-  },
-  {
-    "objectID": "portfolio/csr/index.html#data",
-    "href": "portfolio/csr/index.html#data",
-    "title": "D-SOCIAL-KLD",
-    "section": "Data",
-    "text": "Data\n\nSource: KLD STATS, 1991–2018, via Wharton Research Data Services\nCoverage: 6,324 unique firms; 2,068 indicator-year items; 3,273,013 non-missing observations across 51,586 firm-years\nUniverse: firms present in the KLD database by 2012 (for comparability with published scores)"
-  },
-  {
-    "objectID": "portfolio/csr/index.html#outputs",
-    "href": "portfolio/csr/index.html#outputs",
-    "title": "D-SOCIAL-KLD",
-    "section": "Outputs",
-    "text": "Outputs\nThe estimation pipeline produces posterior means, standard deviations, and percentiles for:\n\nFirm-year scores (\\(\\theta_{it}\\)): the primary quantity of interest\nItem parameters (\\(\\alpha_{jt}\\), \\(\\beta_{jt}\\)): difficulty and discrimination for each indicator-year\n\nScores are interval-scaled and centered near zero in each year. Posterior uncertainty is reported explicitly and should be propagated into downstream analyses."
-  },
-  {
-    "objectID": "portfolio/csr/index.html#resources",
-    "href": "portfolio/csr/index.html#resources",
-    "title": "D-SOCIAL-KLD",
-    "section": "Resources",
-    "text": "Resources\n\nPublished paper — Carroll, Primo & Richter (2016), Strategic Management Journal\nMethodology document — model specification, estimation details, and implementation notes\nGitHub repository — code and replication materials\n\n\nFull draws will be made available at socialscores.org."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "I’m a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.\n\n\nEmail: rjc AT illinois dot edu\n\n\n\n\nFighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations\n\n\n\n\n\nStrategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016.\n\n\n\n\nPS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Lecture notes"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Email: rjc AT illinois dot edu"
-  },
-  {
-    "objectID": "index.html#working-papers",
-    "href": "index.html#working-papers",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Fighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations"
-  },
-  {
-    "objectID": "index.html#published-work",
-    "href": "index.html#published-work",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016."
-  },
-  {
-    "objectID": "index.html#teaching",
-    "href": "index.html#teaching",
-    "title": "Robert J. Carroll",
-    "section": "",
-    "text": "PS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Lecture notes"
-  },
-  {
     "objectID": "portfolio/baseball-range/index.html",
     "href": "portfolio/baseball-range/index.html",
     "title": "CF Range",
@@ -203,67 +126,144 @@
     "text": "Resources\n\nGitHub — full code, model, and data pipeline"
   },
   {
-    "objectID": "portfolio/csr/methodology.html",
-    "href": "portfolio/csr/methodology.html",
+    "objectID": "dsocialkld/index.html",
+    "href": "dsocialkld/index.html",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "",
     "text": "Corporate social responsibility (CSR) is a latent construct. We do not observe a firm’s CSR directly; instead, we observe dozens of binary indicators—strengths and concerns—coded by ratings agencies like KLD (now MSCI ESG). The question is how to aggregate these indicators into a single score.\nThe standard approach in the management literature is the KLD Index: sum the strengths, subtract the concerns. This treats every indicator as equally informative, which is a strong and often implausible assumption. A strength that virtually every firm earns (e.g., a basic governance policy) tells us much less than one that only the most responsible firms achieve. An additive index cannot distinguish between these cases.\nItem response theory (IRT) offers a principled alternative. Originally developed in psychometrics to score examinees on standardized tests, IRT models the probability of a binary response as a function of the respondent’s latent trait and the item’s statistical properties. The analogy is direct: firms are examinees, KLD indicators are test items, and the latent trait is CSR.\nThis document describes the dynamic IRT model used to produce D-SOCIAL-KLD scores, covering the model specification, identification strategy, estimation, and key implementation decisions. The original measure was introduced in Carroll, Primo, and Richter (2016); this implementation extends coverage through 2018 and re-estimates the model using Stan’s Hamiltonian Monte Carlo sampler."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#the-measurement-problem",
-    "href": "portfolio/csr/methodology.html#the-measurement-problem",
+    "objectID": "dsocialkld/index.html#the-measurement-problem",
+    "href": "dsocialkld/index.html#the-measurement-problem",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "",
     "text": "Corporate social responsibility (CSR) is a latent construct. We do not observe a firm’s CSR directly; instead, we observe dozens of binary indicators—strengths and concerns—coded by ratings agencies like KLD (now MSCI ESG). The question is how to aggregate these indicators into a single score.\nThe standard approach in the management literature is the KLD Index: sum the strengths, subtract the concerns. This treats every indicator as equally informative, which is a strong and often implausible assumption. A strength that virtually every firm earns (e.g., a basic governance policy) tells us much less than one that only the most responsible firms achieve. An additive index cannot distinguish between these cases.\nItem response theory (IRT) offers a principled alternative. Originally developed in psychometrics to score examinees on standardized tests, IRT models the probability of a binary response as a function of the respondent’s latent trait and the item’s statistical properties. The analogy is direct: firms are examinees, KLD indicators are test items, and the latent trait is CSR.\nThis document describes the dynamic IRT model used to produce D-SOCIAL-KLD scores, covering the model specification, identification strategy, estimation, and key implementation decisions. The original measure was introduced in Carroll, Primo, and Richter (2016); this implementation extends coverage through 2018 and re-estimates the model using Stan’s Hamiltonian Monte Carlo sampler."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#model-specification",
-    "href": "portfolio/csr/methodology.html#model-specification",
+    "objectID": "dsocialkld/index.html#model-specification",
+    "href": "dsocialkld/index.html#model-specification",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "2 Model specification",
     "text": "2 Model specification\n\n2.1 The two-parameter probit IRT model\nFor each observed triple of firm \\(i\\), KLD indicator \\(j\\), and year \\(t\\), the model specifies:\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\tag{1}\\]\nwhere:\n\n\\(\\theta_{it}\\) is the latent CSR score for firm \\(i\\) in year \\(t\\)—the quantity of interest.\n\\(\\alpha_{jt}\\) is the difficulty of indicator \\(j\\) in year \\(t\\): how much underlying CSR a firm needs to have a 50% probability of being coded 1 on this indicator, all else equal. Higher \\(\\alpha\\) means fewer firms are coded 1 (the indicator is “harder” to earn or harder to avoid).\n\\(\\beta_{jt}\\) is the discrimination of indicator \\(j\\) in year \\(t\\): how steeply the probability of a 1 changes as \\(\\theta\\) increases. Strength indicators tend to have \\(\\beta &gt; 0\\) (more-responsible firms are more likely to earn the strength). Concern indicators tend to have \\(\\beta &lt; 0\\) (more-responsible firms are less likely to have the concern).\n\\(\\Phi(\\cdot)\\) is the standard normal CDF (probit link).\n\nThe discrimination parameter \\(\\beta\\) is what makes IRT superior to an additive index. An indicator with \\(|\\beta| \\approx 0\\) contributes almost nothing to the score; one with large \\(|\\beta|\\) is highly informative. The model estimates these weights from the data rather than assuming they are equal.\n\n\n2.2 Dynamic prior on \\(\\theta\\)\nA static IRT model would treat each year as an independent cross-section, discarding the information that a firm rated highly in 2005 is likely to be rated highly in 2006. The dynamic extension imposes a random-walk prior on \\(\\theta\\):\n\\[\n\\theta_{i, t_0} \\sim \\text{Normal}(0, \\sigma_{\\text{init}})\n\\tag{2}\\]\n\\[\n\\theta_{i,t} \\mid \\theta_{i,t-1} \\sim \\text{Normal}(\\theta_{i,t-1}, \\sigma_{\\text{firm},i})\n\\tag{3}\\]\nThe firm-specific innovation standard deviation \\(\\sigma_{\\text{firm},i}\\) governs how quickly each firm’s CSR position can change year to year. A firm with small \\(\\sigma_{\\text{firm}}\\) has a CSR trajectory that is relatively stable; a firm with large \\(\\sigma_{\\text{firm}}\\) can shift rapidly.\nRather than estimating each \\(\\sigma_{\\text{firm},i}\\) in isolation, we use partial pooling via a hierarchical prior:\n\\[\n\\sigma_{\\text{firm},i} \\sim \\text{Half-Normal}(0, \\sigma_{\\text{global}})\n\\]\n\\[\n\\sigma_{\\text{global}} \\sim \\text{Half-Normal}(0, 1)\n\\]\nThis structure lets the model learn from the full cross-section of firms what a “typical” rate of change looks like, while still allowing individual firms to deviate from that baseline. The result is a Bayesian shrinkage estimator: firms with limited data are pulled toward the group mean rate of change, while firms with abundant data are estimated more freely.\n\n\n2.3 Item priors\nThe difficulty and discrimination parameters receive mildly regularizing priors:\n\\[\n\\alpha_{jt} \\sim \\text{Normal}(0, 5) \\qquad \\beta_{jt} \\sim \\text{Normal}(0, 2.5)\n\\]\nThese are wide enough to let the data drive the estimates while preventing extreme values that could destabilize the sampler."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#sec-identification",
-    "href": "portfolio/csr/methodology.html#sec-identification",
+    "objectID": "dsocialkld/index.html#sec-identification",
+    "href": "dsocialkld/index.html#sec-identification",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "3 Identification",
     "text": "3 Identification\nIRT models are identified only up to a reflection (multiplying all \\(\\theta\\) by \\(-1\\) and all \\(\\beta\\) by \\(-1\\) gives the same likelihood) and a scale (the units of \\(\\theta\\) are arbitrary without a reference point).\nWe fix both by pinning two anchor firms’ first-year scores to fixed values:\n\n\n\n\n\n\n\n\nAnchor\nConstraint\nRationale\n\n\n\n\nHalliburton (HAL)\n\\(\\theta_{\\text{HAL},t_0} = -1\\)\nConsistently associated with environmental and governance controversies; used as the negative anchor in Carroll, Primo, and Richter (2016)\n\n\nAbbott Laboratories (ABT)\n\\(\\theta_{\\text{ABT},t_0} = +1\\)\nConsistently ranked among top corporate citizens in major CSR indices (DJSI, MSCI, Fortune)\n\n\n\nwhere \\(t_0\\) denotes each anchor firm’s first appearance in the data. The fixed values apply only to the first-year score; subsequent years evolve freely under the dynamic prior. Fixing at \\(\\pm 1\\) rather than merely constraining the sign eliminates a scale degeneracy: sign constraints allow the anchor scores to hover near zero, leaving the overall scale of \\(\\theta\\) and \\(\\beta\\) unidentified across chains. The fixed values are hard-coded in the transformed parameters block; the anchor scores are not sampled parameters.\n\n\n\n\n\n\nNote\n\n\n\nThe original paper used Microsoft (MSFT) as the positive anchor. MSFT lacks KLD indicator data before 2010, making it unsuitable for the full panel. Johnson & Johnson (JNJ) was considered as a replacement but also lacks data before 2001. ABT has complete coverage and a strong, well-documented CSR record throughout the period."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#estimation",
-    "href": "portfolio/csr/methodology.html#estimation",
+    "objectID": "dsocialkld/index.html#estimation",
+    "href": "dsocialkld/index.html#estimation",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "4 Estimation",
     "text": "4 Estimation\n\n4.1 From Gibbs to HMC\nThe original D-SOCIAL-KLD scores were estimated using MCMCpack::MCMCdynamicIRT1d in R, which implements a Gibbs sampler with data augmentation following Martin and Quinn (2002). Gibbs sampling has several limitations for a model of this size:\n\nHigh autocorrelation: Gibbs draws are serially correlated because each parameter is updated conditional on all others. Effective sample sizes are often a small fraction of the nominal chain length.\nNo built-in diagnostics: convergence must be assessed post hoc, typically by informal visual inspection of trace plots.\nDifficult to parallelize: Gibbs updates are inherently sequential; running multiple chains requires separate processes with no communication.\n\nThis implementation uses Stan (Carpenter et al. 2017), which employs the No-U-Turn Sampler (NUTS), an adaptive variant of Hamiltonian Monte Carlo (HMC) (Hoffman and Gelman 2014). HMC uses gradient information to make large, low-autocorrelation moves through the posterior, resulting in dramatically higher effective sample sizes per draw. Stan also provides:\n\nAutomatic diagnostics: divergent transitions, R-hat, bulk and tail effective sample size\nParallel chains: multiple chains run simultaneously, enabling both faster estimation and formal convergence assessment\nPointwise log-likelihood: can be computed in a generated quantities block for leave-one-out cross-validation via the loo package (Vehtari, Gelman, and Gabry 2017). This block is omitted from the primary model file because storing an \\(N\\)-length vector per posterior draw exhausts memory for the full KLD dataset (~3.3M observations). LOO diagnostics should be computed on a subsample or via moment matching.\n\n\n\n4.2 Implementation details\nThe Stan model uses several techniques to handle the scale of the problem:\nSparse data representation. The KLD panel is highly sparse: firms enter and exit the database, and the set of indicators changes over time. Rather than passing the full firm \\(\\times\\) indicator \\(\\times\\) year array to Stan (which would be mostly NA), the R preprocessing scripts convert the data to a flat list of non-missing \\((i, j, t, y)\\) tuples. This reduces the data footprint from millions of potential cells to the 3,273,013 actually observed.\nNon-centered parameterization (NCP). The centered form of the dynamic prior creates a funnel geometry in the joint posterior: when \\(\\sigma_{\\text{global}}\\) is small, \\(\\sigma_{\\text{firm}}\\) must be small, and when \\(\\sigma_{\\text{firm}}\\) is small, consecutive \\(\\theta\\) values must be nearly identical. HMC must take extremely small leapfrog steps to navigate this narrow funnel, resulting in nearly all transitions hitting the maximum treedepth and near-zero E-BFMI values.\nThe NCP decouples these hierarchical dependencies by introducing raw standard-normal innovation parameters and treating \\(\\theta\\) as a deterministic function in transformed parameters:\n\\[\n\\sigma_{\\text{firm},i} = \\sigma_{\\text{global}} \\cdot \\tilde{\\sigma}_i, \\qquad \\tilde{\\sigma}_i \\sim \\text{Half-Normal}(0,1)\n\\]\n\\[\n\\theta_{i,t_0} = \\sigma_{\\text{init}} \\cdot z^{\\text{init}}_i, \\qquad z^{\\text{init}}_i \\sim \\text{Normal}(0,1)\n\\]\n\\[\n\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot z^{\\text{trans}}_{i,t}, \\qquad z^{\\text{trans}}_{i,t} \\sim \\text{Normal}(0,1)\n\\]\n(with the exception of the anchor firms’ first-year scores, which are fixed constants—not sampled—as described in Section 3). The \\(\\theta\\) vector is assembled sequentially in the transformed parameters block by processing transitions in chronological order within each firm. Firm-years that follow gaps in the panel (i.e., years that are not consecutive transitions) receive the same \\(\\sigma_{\\text{init}} \\cdot z\\) initialization as first appearances.\nInitialization. All chains are initialized at zero on the unconstrained scale (init = 0). Under NCP, this places all \\(z\\) innovations at zero, so every non-anchor \\(\\theta\\) starts at zero; the anchor scores are fixed at \\(\\pm 1\\) and are not sampled. This avoids the initialization failures that arise with random starts when the dynamic prior drives \\(\\log p\\) to \\(-\\infty\\).\nPost-estimation memory management. The full model has approximately 120,000 parameters, producing chain CSVs of ~3.4 GB each (13.6 GB total for 4 chains). Neither cmdstanr::as_cmdstan_fit() nor data.table::fread() can load these files on a 16 GB machine—the former exhausts memory building its internal data structure, and the latter overflows its header-line parser on the ~1.3 MB, 120,000-field column header. The pipeline converts the raw chain CSVs to Apache Parquet via Arrow, dropping the NCP internal parameters (z_init, z_trans, sigma_firm_raw) that are never needed downstream. This cuts the column count from ~120,000 to ~62,000 and file size to ~1.5 GB per chain. Diagnostics and score extraction then use Arrow’s column-selective Parquet reads, loading only the parameters needed for each operation—typically a few hundred to a few thousand columns at a time, keeping peak memory well under 1 GB.\n\n\n4.3 Estimation results\nThe model was estimated with 4 chains, each running 1,000 warmup iterations and 2,500 sampling iterations (10,000 posterior draws total), with adapt_delta = 0.9. Wall-clock time was approximately 3.2 days on an Apple M-series machine (single-threaded per chain, 4 chains in parallel).\n\n4.3.1 Sampler diagnostics\n\n\n\nDiagnostic\nResult\n\n\n\n\nDivergences\n0 across all 4 chains\n\n\nMax treedepth hits\n0 (max depth = 10)\n\n\nE-BFMI\n0.80, 0.78, 0.76, 0.81\n\n\n\nAll E-BFMI values are well above the 0.3 concern threshold, confirming that the non-centered parameterization successfully resolves the funnel geometry that plagues the centered form of this model.\n\n\n4.3.2 Convergence\nConvergence was assessed via R-hat and effective sample size (ESS) on a stratified sample of 352 parameters spanning all parameter types—hyperparameters, item difficulties, item discriminations, firm-year scores, and firm-level innovation standard deviations:\n\n\n\nMetric\nResult\n\n\n\n\nR-hat\nMax 1.004 across all 352 parameters (all \\(\\leq\\) 1.01)\n\n\nBulk ESS\nMin 741 (sigma_init), generally 2,000–26,000+\n\n\nTail ESS\nMin 1,263, generally 2,800–10,000+\n\n\n\nThe lowest bulk ESS belongs to \\(\\sigma_{\\text{init}}\\), the global initialization scale—a single scalar governing all firms’ first-year draws. Even at 741, this represents adequate posterior exploration for a parameter with a simple unimodal marginal. All item parameters and firm-year scores have bulk ESS comfortably in the thousands.\n\n\n4.3.3 Anchor trajectories\nThe identification strategy pins each anchor firm’s first-year score to a fixed value (HAL at \\(-1\\), ABT at \\(+1\\) in 1991); subsequent years evolve freely under the dynamic prior. The resulting trajectories are substantively revealing.\nABT (the positive anchor) remains consistently positive throughout the panel, with posterior means ranging from 0.65 to 0.87—stable high-CSR performance over nearly three decades.\nHAL (the negative anchor) tells a more surprising story. Pinned at \\(-1\\) in 1991, Halliburton’s estimated CSR score turns positive by 1993 and remains in the 0.5–0.8 range for the remainder of the period. This is not a failure of identification—the first-year pin successfully sets the scale, and the model is free to let the trajectory evolve as the data dictate. What the data dictate is that even a firm selected as a low-CSR exemplar in the early 1990s improved substantially over the following decades.\nThis pattern is not unique to Halliburton. Among all firms in the panel with at least 10 years of coverage, not a single one maintains a consistently negative CSR trajectory across the full 1991–2018 period. The most persistently negative firms (e.g., Saul Centers, DXP Enterprises, Cass Financial) enter the panel in 2003 or later, after KLD expanded its coverage universe to include smaller firms. The implication is clear: corporate social responsibility, as measured by KLD indicators, improved broadly and substantially over this period. A dynamic model captures this secular trend through the \\(\\theta\\) trajectories; a static cross-sectional analysis would miss it entirely."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#key-findings",
-    "href": "portfolio/csr/methodology.html#key-findings",
+    "objectID": "dsocialkld/index.html#key-findings",
+    "href": "dsocialkld/index.html#key-findings",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "5 Key findings",
     "text": "5 Key findings\nThree results from the estimation merit emphasis.\n\n5.1 The model works at scale\nZero divergences, zero max-treedepth hits, healthy E-BFMI, and R-hat \\(\\leq\\) 1.004 across all spot-checked parameters. The non-centered parameterization eliminates the pathological funnel geometry that would otherwise cripple HMC at this scale. This is a model with over 120,000 parameters estimated from 3.3 million observations; clean diagnostics validate both the parameterization strategy and the choice of Stan over Gibbs sampling.\n\n\n5.2 CSR improved broadly over 1991–2018\nThe anchor trajectory analysis (see Section 4.3.3) reveals that no firm with full-panel coverage maintains a persistently negative CSR score. Halliburton—chosen as a low-CSR exemplar based on its environmental and governance record—turns positive within two years of the 1991 starting point. This reflects the observable pattern that KLD strength indicators became more widely adopted and concern indicators became less prevalent over time. The dynamic model captures this secular improvement through the firm-year \\(\\theta\\) trajectories rather than absorbing it into the item parameters, making the trend visible and measurable.\n\n\n5.3 Indicator informativeness varies substantially\nThe estimated discrimination parameters (\\(\\beta\\)) range widely across indicators. Some KLD items sharply separate high- from low-CSR firms; others contribute almost no discriminating power. This variation is precisely what the additive KLD Index cannot capture. By weighting all indicators equally, the index treats a near-universal governance checkbox the same as a rare environmental commitment that only the most responsible firms achieve. The IRT scores correct for this by data-adaptively downweighting uninformative items and amplifying informative ones."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#data",
-    "href": "portfolio/csr/methodology.html#data",
+    "objectID": "dsocialkld/index.html#data",
+    "href": "dsocialkld/index.html#data",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "6 Data",
     "text": "6 Data\n\n6.1 Source\nThe raw data come from KLD STATS (now MSCI ESG), a panel of binary CSR indicators for publicly traded U.S. firms. The dataset used here covers 1991–2018 and is available through Wharton Research Data Services (WRDS). KLD indicators are organized into categories (community, diversity, employee relations, environment, human rights, product) and coded as either strengths or concerns.\n\n\n6.2 Preprocessing\nThe cleaning pipeline handles several data-quality issues:\n\nNon-binary values: a small number of indicator values exceed 1 (e.g., HUM_str_num = 2). These are clamped to 1.\nTicker disambiguation: KLD’s coverage expanded over time, and different firms occasionally share the same ticker symbol across coverage universes. The disambiguation uses issuerid where available (2017–2018) and deterministic numeric suffixes (.2, .3, …) for earlier years.\nTime-varying indicator sets: not all indicators appear in all years. Columns that are entirely NA in a given year are excluded from that year’s item set.\nUniverse restriction: the estimation sample is restricted to firms present in the KLD database by 2012, ensuring comparability with the original published scores.\n\n\n\n6.3 Scale and sparsity\nThe full panel contains 6,324 unique firms, 2,068 indicator-year items, and 3,273,013 non-missing observations across 51,586 firm-years. Coverage is uneven: the early KLD years (1991–2000) include ~650 firms per year; later years include 3,000+. Many prominent firms (e.g., IBM, Coca-Cola) have surprisingly sparse indicator data in certain periods, reflecting KLD’s evolving coverage universe rather than missing observations in the usual sense."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#interpreting-the-output",
-    "href": "portfolio/csr/methodology.html#interpreting-the-output",
+    "objectID": "dsocialkld/index.html#interpreting-the-output",
+    "href": "dsocialkld/index.html#interpreting-the-output",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "7 Interpreting the output",
     "text": "7 Interpreting the output\n\n7.1 Scores (\\(\\theta\\))\nThe primary output is a posterior distribution over \\(\\theta_{it}\\) for each firm-year. The scores file reports the posterior mean, standard deviation, and percentiles.\nKey properties:\n\nCentered near zero: by construction, the distribution of scores in any given year has mean near zero. Positive scores indicate above-median CSR; negative scores indicate below-median.\nInterval-scaled: differences between scores are meaningful (a firm at +1.5 has measurably higher CSR than a firm at +0.5), but ratios are not (a score of +2 does not mean “twice as responsible” as +1).\nUncertainty quantified: the posterior SD for each firm-year is an explicit measure of estimation uncertainty. Firms with more indicators observed in a given year will have smaller SDs (more precise scores). Researchers should propagate this uncertainty into downstream analyses.\n\n\n\n7.2 Item parameters (\\(\\alpha\\), \\(\\beta\\))\nPosterior summaries for each indicator’s difficulty and discrimination are also available. These are useful for understanding which KLD indicators are most informative about the latent CSR dimension and how the indicator set has evolved over time."
   },
   {
-    "objectID": "portfolio/csr/methodology.html#references",
-    "href": "portfolio/csr/methodology.html#references",
+    "objectID": "dsocialkld/index.html#references",
+    "href": "dsocialkld/index.html#references",
     "title": "D-SOCIAL-KLD: Methodology",
     "section": "8 References",
     "text": "8 References\n\n\nCarpenter, Bob, Andrew Gelman, Matthew D. Hoffman, Daniel Lee, Ben Goodrich, Michael Betancourt, Marcus Brubaker, Jiqiang Guo, Peter Li, and Allen Riddell. 2017. “Stan: A Probabilistic Programming Language.” Journal of Statistical Software 76 (1): 1–32. https://doi.org/10.18637/jss.v076.i01.\n\n\nCarroll, Robert J., David M. Primo, and Brian K. Richter. 2016. “Using Item Response Theory to Improve Measurement in Strategic Management Research: An Application to Corporate Social Responsibility.” Strategic Management Journal 37 (1): 66–85. https://doi.org/10.1002/smj.2463.\n\n\nHoffman, Matthew D., and Andrew Gelman. 2014. “The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo.” Journal of Machine Learning Research 15 (47): 1593–623.\n\n\nMartin, Andrew D., and Kevin M. Quinn. 2002. “Dynamic Ideal Point Estimation via Markov Chain Monte Carlo for the U.S. Supreme Court, 1953–1999.” Political Analysis 10 (2): 134–53. https://doi.org/10.1093/pan/10.2.134.\n\n\nVehtari, Aki, Andrew Gelman, and Jonah Gabry. 2017. “Practical Bayesian Model Evaluation Using Leave-One-Out Cross-Validation and WAIC.” Statistics and Computing 27 (5): 1413–32. https://doi.org/10.1007/s11222-016-9696-4."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "I’m a political scientist at the University of Illinois at Urbana-Champaign. I teach courses in international relations, political economy, and formal modeling.\n\n\nEmail: rjc AT illinois dot edu\n\n\n\n\nFighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations\n\n\n\n\n\nStrategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016. Updated scores & methodology · GitHub\n\n\n\n\nPS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Lecture notes"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Email: rjc AT illinois dot edu"
+  },
+  {
+    "objectID": "index.html#working-papers",
+    "href": "index.html#working-papers",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Fighting in the shadow of intervention: a learned-proxy analysis\nPolicy devolution and cooperation dilemmas (with Chris Reenock and David Konisky)\nMaking peace on the cheap\nSunspot volatility and the price of peace\nThe shape of possible states\nPreferring unified theories\nThe causal content of game-theoretic models\nWar and peace in the marketplace\nA theory of force\nPolicy spaces as organizational schemes: a semantic theory of electoral competition\nA state is its relations: the Yoneda lemma and relational identity in international relations"
+  },
+  {
+    "objectID": "index.html#published-work",
+    "href": "index.html#published-work",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "Strategic avoidance and rulemaking procedures (with Peter Bils and Lawrence Rothenberg) Journal of Theoretical Politics 36(2): 156–185. 2024.\nCostly signaling in autocracy (with Amy Pond) International Interactions 47(4): 612–632. 2021.\nPrediction, proxies, and power (with Brenton Kenkel) American Journal of Political Science 63(3): 577–593. 2019.\nUsing item response theory to improve measurement in strategic management research: An application to corporate social responsibility (with David Primo and Brian Kelleher Richter) Strategic Management Journal 37(1): 66–85. 2016. Updated scores & methodology · GitHub"
+  },
+  {
+    "objectID": "index.html#teaching",
+    "href": "index.html#teaching",
+    "title": "Robert J. Carroll",
+    "section": "",
+    "text": "PS 231: Strategic Models — game theory and its applications in political science Syllabus · Sample problem set · Lecture videos\nPS 398: Strategic International Relations — formal methods in IR theory Syllabus · Sample problem set · Lecture notes"
+  },
+  {
+    "objectID": "portfolio/csr/index.html",
+    "href": "portfolio/csr/index.html",
+    "title": "D-SOCIAL-KLD",
+    "section": "",
+    "text": "Dynamic IRT scores for corporate social responsibility · 1991–2018 · with David Primo and Brian Kelleher Richter"
+  },
+  {
+    "objectID": "portfolio/csr/index.html#overview",
+    "href": "portfolio/csr/index.html#overview",
+    "title": "D-SOCIAL-KLD",
+    "section": "Overview",
+    "text": "Overview\nKLD STATS (now MSCI ESG) codes publicly traded U.S. firms on dozens of binary indicators each year — strengths and concerns across categories like environment, labor, governance, and community relations. The standard approach in the management literature is the KLD Index: sum the strengths and subtract the concerns. This treats every indicator as equally informative, which is a strong and usually implausible assumption.\nD-SOCIAL-KLD replaces the additive index with a dynamic two-parameter IRT model. The model treats firms as examinees and KLD indicators as test items. A discrimination parameter for each item lets the data decide how informative each indicator is; a difficulty parameter captures how demanding each indicator is at the population level. A firm-specific random walk prior links scores across years, encoding the intuition that a firm’s CSR position in 2006 is strongly predicted by its position in 2005.\nThe result is a posterior distribution over a latent CSR score \\(\\theta_{it}\\) for each firm-year — with uncertainty quantified, discrimination weights estimated from the data, and year-to-year dynamics modeled explicitly."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#the-model",
+    "href": "portfolio/csr/index.html#the-model",
+    "title": "D-SOCIAL-KLD",
+    "section": "The model",
+    "text": "The model\n\\[\ny_{ijt} \\sim \\text{Bernoulli}\\bigl(\\Phi(\\beta_{jt} \\cdot \\theta_{it} - \\alpha_{jt})\\bigr)\n\\]\n\n\\(\\theta_{it}\\): latent CSR score for firm \\(i\\) in year \\(t\\)\n\\(\\alpha_{jt}\\): difficulty of indicator \\(j\\) in year \\(t\\)\n\\(\\beta_{jt}\\): discrimination of indicator \\(j\\) in year \\(t\\)\nYear-to-year dynamics: \\(\\theta_{i,t} = \\theta_{i,t-1} + \\sigma_{\\text{firm},i} \\cdot \\varepsilon\\)\n\nEstimation uses Stan’s No-U-Turn Sampler with a non-centered parameterization for the dynamic prior, which resolves the funnel geometry that the centered form creates in the joint posterior. The full model (~120K parameters) runs 4 chains for 3,500 iterations each, completing in approximately 3 days with zero divergent transitions and R-hat \\(\\leq\\) 1.004 across all spot-checked parameters."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#data",
+    "href": "portfolio/csr/index.html#data",
+    "title": "D-SOCIAL-KLD",
+    "section": "Data",
+    "text": "Data\n\nSource: KLD STATS, 1991–2018, via Wharton Research Data Services\nCoverage: 6,324 unique firms; 2,068 indicator-year items; 3,273,013 non-missing observations across 51,586 firm-years\nUniverse: firms present in the KLD database by 2012 (for comparability with published scores)"
+  },
+  {
+    "objectID": "portfolio/csr/index.html#outputs",
+    "href": "portfolio/csr/index.html#outputs",
+    "title": "D-SOCIAL-KLD",
+    "section": "Outputs",
+    "text": "Outputs\nThe estimation pipeline produces posterior means, standard deviations, and percentiles for:\n\nFirm-year scores (\\(\\theta_{it}\\)): the primary quantity of interest\nItem parameters (\\(\\alpha_{jt}\\), \\(\\beta_{jt}\\)): difficulty and discrimination for each indicator-year\n\nScores are interval-scaled and centered near zero in each year. Posterior uncertainty is reported explicitly and should be propagated into downstream analyses."
+  },
+  {
+    "objectID": "portfolio/csr/index.html#resources",
+    "href": "portfolio/csr/index.html#resources",
+    "title": "D-SOCIAL-KLD",
+    "section": "Resources",
+    "text": "Resources\n\nPublished paper — Carroll, Primo & Richter (2016), Strategic Management Journal\nMethodology document — model specification, estimation details, and implementation notes\nGitHub repository — code and replication materials\n\n\nFull draws will be made available at socialscores.org."
   },
   {
     "objectID": "portfolio/index.html",
