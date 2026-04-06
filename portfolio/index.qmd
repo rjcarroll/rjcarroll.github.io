@@ -34,7 +34,7 @@ Each fielder gets a catchability ellipse fit to Statcast fly-ball outcomes via S
 
 **Dynamic corporate social responsibility scores, 1991–2018**
 
-KLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years.
+KLD rates firms on dozens of binary ESG indicators each year. Rather than summing them into an index, this project estimates a latent CSR score for each firm-year using a dynamic two-parameter IRT model fit in Stan. Discrimination parameters let the data decide which indicators are most informative; a firm-specific random walk links scores across years. Covers 6,324 firms and 51,586 firm-years (1991--2018).
 
 <span class="project-tag">Bayesian inference</span>
 <span class="project-tag">IRT</span>
