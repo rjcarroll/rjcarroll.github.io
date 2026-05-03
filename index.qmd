@@ -8,48 +8,96 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 ## Contact
 
-Email: rjc AT illinois dot edu
+[rjc@illinois.edu](mailto:rjc@illinois.edu) · [Schedule a meeting](https://calendly.com/robcarroll)
 
-## Working papers
+## Papers
 
 - [Fighting in the shadow of intervention: a learned-proxy analysis](shadow.pdf)
-- [Making peace on the cheap](cheap.pdf)
+
+  A learned-proxy measure of anticipated third-party intervention, covering the full population of potential interveners and disciplined by a Nash fixed-point condition. Expected government-biased intervention deters civil war onset; expected opposition-biased intervention encourages it.
+
 - [Sunspot volatility and the price of peace](sunspot.pdf)
-- [The shape of possible states](shape.pdf)
+
+  When a strong country pays tribute to deter a weaker adversary, the cost of peace distorts its reduced-form payoff over wealth into non-concavity. With access to financial markets, an extrinsic random variable — a sunspot, unrelated to fundamentals — can then determine whether the country pays tribute or goes to war.
+
 - [Preferring unified theories](theories.pdf)
+
+  What does it mean to genuinely unify two scientific theories, as opposed to merely conjoining them? A categorical framework characterizes unification as a *generative effect* and shows that detecting its value requires asking cross-domain questions — so two agents with identical rationality axioms can rationally disagree about whether unification is worth pursuing.
+
 - [The causal content of game-theoretic models](choices.pdf)
-- [War and peace in the marketplace](market.pdf)
-- [A theory of force](force.pdf)
-- [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
+
+  When do game-theoretic models license causal claims? The extensive-form game tree is structurally isomorphic to Dawid's augmented DAG, with strategies as treatment regimes — making effects-of-causes queries tractable in any well-specified game and causes-of-effects queries tractable only when the game provides a *determining concomitant*.
+
 - [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
+
+  Within any frame that specifies actors and the relations among them, the Yoneda lemma fixes an actor's identity by its complete profile of relations — and says nothing about the choice of frame. The asymmetry threads the IR essentialism-trap debate: identity is relational profile, given a frame; the frame remains structurally open.
+
+- [Borders, spillovers, and the watershed lattice](watershed-lattice.pdf) (with [David Konisky](https://energyjustice.indiana.edu/) and [Chris Reenock](https://chrisreenock.wordpress.com/))
+
+  Pollution does not respect state lines, but regulators must. The paper formalizes the jurisdictional map-design problem on a directed spillover network and proves that the set of watershed tilings forms a Boolean algebra — yielding a neutrality result on aggregate provision, a Galois duality between map redesign and intergovernmental grant design, and a closed-form measure of the welfare cost of misaligned borders.
+
+## Books
+
+### [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
+
+(under contract)
+
+A semantic theory of electoral competition in which voters and candidates hold *understandings* — epistemic-semantic pairs on a complete lattice — rather than positions in a policy space. Policy space is recoverable when a coalition mountain condition holds and absent otherwise; when it fails, the lattice predicts polysemic campaigns, structural polarization, and welfare effects with no spatial analog.
+
+### Force, State, Market
+
+Three book manuscripts that reconstruct state-centric IR theory from primitives: what *force* is, what a *state* is, and how states pursue *wealth and power* jointly. Each volume is self-contained; together they develop a unified analytical apparatus.
+
+- [A theory of force](force.pdf)
+
+  What *is* force, that states project and balance and apply? The book asks the prior question Clausewitz left unanswered and develops a categorical account in which force is recursive, dynamic, costly, and subjective — recovering Lanchester's laws and Dupuy's combat-power calculus as special cases of a general theory of net assessment.
+
+- [The shape of possible states](shape.pdf)
+
+  What does it mean for states to be alike? Modeling each as a producer of coercive capacity, the book shows that the space of possible states is contractible under regularity conditions on production technology and cost; the real content of the result lies in the admissibility conditions that mark the phase boundary between the classical regime where the theorem holds and the wild regime where it fails.
+
+- [War and peace in the marketplace](market.pdf)
+
+  Why do the states that compete fiercest in international markets also compete fiercest militarily? The book argues the international political-economic system is one phenomenon rather than two coupled — states make consumption and deployment decisions jointly, because the prices that constrain consumption are themselves products of deployment — and develops the general-equilibrium apparatus the joint pursuit requires, with applications to peacemaking, sanctions, and institutions.
 
 ## Published work
 
-- [Policy devolution and cooperation dilemmas](policy-devolution.pdf) (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
-Forthcoming in *Journal of Theoretical Politics*.
+- [Policy devolution and cooperation dilemmas](policy-devolution.pdf)
+  (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
+  Forthcoming in *Journal of Theoretical Politics*.
+
+  A formal-and-empirical model of regulatory effort under fragmented jurisdictional design, focused on the case where "gravity goes one way" — spillovers follow a partial order, as with water pollution. The model shows that regulators exert less effort near the bottom of their jurisdiction; the empirical half tests this with a novel GIS dataset of state regional offices and major facilities under the Clean Water Act.
 
 - [Strategic avoidance and rulemaking procedures](https://doi.org/10.1177/09516298241237209)
   (with [Peter Bils](http://peterbils.com/) and [Lawrence Rothenberg](https://lawrencerothenberg.weebly.com/))
   *Journal of Theoretical Politics* 36(2): 156–185. 2024.
   [PDF](strategic-avoidance.pdf)
 
+  US agencies often skirt notice-and-comment rulemaking by claiming exemption, and courts usually agree. The paper formalizes the choice between rulemaking and avoidance and produces a counterintuitive result borne out in agency-level data: *more* biased agencies engage in *less* avoidance, since they face more court skepticism and rely on interest-group comments for legitimacy.
+
 - [Costly signaling in autocracy](https://doi.org/10.1080/03050629.2021.1898956)
   (with [Amy Pond](https://amypond.droppages.net/))
   *International Interactions* 47(4): 612–632. 2021.
 
+  Citizens deciding whether to revolt face uncertainty about whether the autocrat will democratize or repress. Wealth transfers cannot credibly signal repressive willingness; shows of force can, provided the repressive type enjoys a competitive advantage in displaying strength — illustrating a general principle of costly signaling: information transmission requires the signal to be cheaper for the type that wants to distinguish itself.
+
 - [Prediction, proxies, and power](https://doi.org/10.1111/ajps.12442)
   (with [Brenton Kenkel](https://bkenkel.com/))
   *American Journal of Political Science* 63(3): 577–593. 2019.
+
+  The capability ratio — the standard measure of relative military power — is barely better than random guessing at predicting militarized dispute outcomes. We build a machine-learning replacement, the Dispute Outcome Expectations (DOE) score, that is an order of magnitude more accurate; using DOE flips the headline conclusion of Reed et al. (2008) and improves goodness of fit across 18 other dyadic replications.
 
 - [Using item response theory to improve measurement in strategic management research: An application to corporate social responsibility](https://doi.org/10.1002/smj.2463)
   (with [David Primo](https://www.sas.rochester.edu/psc/primo/) and [Brian Kelleher Richter](http://www.briankrichter.com/))
   *Strategic Management Journal* 37(1): 66–85. 2016.
   [Updated scores & methodology](dsocialkld/) · [GitHub](https://github.com/rjcarroll/d-social-kld)
 
+  The standard measure of corporate social responsibility — summing items in the KLD Index — treats every trait as equally informative. We use item response theory to recover the latent CSR construct from the same data, producing D-SOCIAL-KLD scores that reweight items by their diagnostic value, outperform both the additive index and factor analysis at predicting new CSR activity, and rerank firms in surprising ways (Apple worse than expected; Walmart better).
+
 ## Teaching
 
 **PS 231: Strategic Models** — game theory and its applications in political science
-[Syllabus](ps231-syllabus.pdf) · [Sample problem set](ps231-problemset-05.pdf) · [Lecture videos](https://youtube.com/playlist?list=PLc7nd1hqyQFf5HeiiOtw55D_BnU0nRcD8&si=RqSaHYOUS3Jsztoe)
+[Syllabus](ps231-syllabus.pdf) · [Sample problem set](ps231-problemset-05.pdf) · [Lecture videos](https://youtube.com/playlist?list=PLc7nd1hqyQFf5HeiiOtw55D_BnU0nRcD8&si=RqSaHYOUS3Jsztoe) · [Playlist](https://music.apple.com/us/playlist/ps-231-the-playlist/pl.u-mJy81BJtG1y7Ny)
 
 **PS 398: Strategic International Relations** — formal methods in IR theory
 [Syllabus](ps398-syllabus.pdf) · [Sample problem set](ps398-problemset-01.pdf) · [Lecture notes](ps398-notes1.pdf)

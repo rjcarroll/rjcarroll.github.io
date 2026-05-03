@@ -5,8 +5,10 @@ project:
     - "*.qmd"
     - "portfolio/**/*.qmd"
     - "dsocialkld/*.qmd"
+    - "teaching-portfolio/*.qmd"
   resources:
     - CNAME
+    - robots.txt
     - "*.pdf"
     - "*.png"
     - "dsocialkld/references.bib"
@@ -21,8 +23,13 @@ website:
       - text: "Robert J. Carroll"
         href: index.qmd
     right:
+      - text: "Schedule"
+        icon: calendar
+        href: https://calendly.com/robcarroll
       - text: "CV"
         href: CV.pdf
+      - icon: envelope
+        href: mailto:rjc@illinois.edu
       - icon: github
         href: https://github.com/rjcarroll
       - icon: linkedin

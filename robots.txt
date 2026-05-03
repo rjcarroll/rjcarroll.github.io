@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /teaching-portfolio/
+Disallow: /portfolio/
+
+Sitemap: https://robertjcarroll.com/sitemap.xml
