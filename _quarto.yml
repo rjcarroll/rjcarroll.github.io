@@ -11,6 +11,7 @@ project:
     - robots.txt
     - "*.pdf"
     - "*.png"
+    - "notes/*.pdf"
     - "dsocialkld/references.bib"
 
 website:
@@ -20,8 +21,8 @@ website:
     background: light
     foreground: dark
     left:
-      - text: "Robert J. Carroll"
-        href: index.qmd
+      - text: "Grad Notes"
+        href: notes.qmd
     right:
       - text: "Schedule"
         icon: calendar

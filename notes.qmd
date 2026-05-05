@@ -1,0 +1,77 @@
+---
+title: ""
+---
+
+# Grad Notes
+
+A growing collection of self-contained handouts on the mathematics needed to read formal political-economy theory and to write it. In the spirit of Kim Border's mathematical economics notes, but oriented to political scientists, with examples drawn from across political science and political economy. Each handout is independent and reference-able on its own; the numbering below is a suggested reading order rather than a strict prerequisite chain.
+
+## Foundations: language and logic
+
+- [Preface](notes/preface.pdf)
+
+  Project framing, conventions, scope, and what is assumed. Background: algebra and a year of calculus.
+
+- [Propositional logic](notes/propositional-logic.pdf)
+
+  The simplest formal system in which the notion of "follows from" can be made precise. Syntax (atomic propositions, connectives, well-formed formulas), semantics (valuations, truth-in-a-valuation), tautology / contradiction / satisfiability, logical equivalence, and logical consequence. PE examples: bicameralism with veto, contraposition in the democratic peace, denying the antecedent as a fallacy.
+
+## Foundations: sets and structures
+
+- [Naive set theory](notes/naive-set-theory.pdf)
+
+  Sets, set operations and the Venn-diagram picture, indexed unions and intersections, Cartesian products and tuples, disjoint unions, relations and equivalence classes, functions, and a closing footnote on Russell's paradox and how the axiom of separation rules it out.
+
+- [Order theory](notes/order-theory.pdf)
+
+  Preorders, partial orders, and total orders, with the strict-and-symmetric decomposition; Hasse diagrams; bounds, maxima vs. suprema, and the maximum-versus-maximal distinction; lattices; order-preserving functions, with the headline application being the utility representation of preferences (and the canonical lex-preferences-have-no-utility-representation counterexample).
+
+- [Cardinality and infinity](notes/cardinality-and-infinity.pdf)
+
+  Comparing the sizes of infinite sets via bijection; Schröder–Bernstein; the countability of $\mathbb{Z}$, $\mathbb{Q}$, and $\mathbb{N} \times \mathbb{N}$; Cantor's diagonal argument for the uncountability of $\mathbb{R}$; Cantor's theorem and the unbounded hierarchy of cardinals; the discrete-versus-continuous translation that organizes a great deal of applied modeling.
+
+## Foundations: analysis
+
+- [Sequences and limits](notes/sequences-and-limits.pdf)
+
+  $\epsilon$-$N$ convergence; the least upper bound property as the structural fact distinguishing $\mathbb{R}$ from $\mathbb{Q}$; the construction of $\mathbb{R}$ from $\mathbb{Q}$ as an extended footnote; the completeness-equivalence triangle (LUB / monotone convergence / Cauchy / Bolzano–Weierstrass); and $\limsup$ / $\liminf$ for bounded sequences that don't converge.
+
+- [Open and closed sets](notes/open-and-closed-sets.pdf)
+
+  $\mathbb{R}^n$ with the Euclidean metric; open and closed sets and their algebra; closure, interior, boundary, accumulation points, with the sequential characterization of closedness; compactness via open covers, Heine–Borel, and the sequential equivalent, with a footnote on the failure of "closed and bounded = compact" in infinite dimensions; connectedness in $\mathbb{R}$ (= intervals) and convex-implies-connected in $\mathbb{R}^n$.
+
+- [Continuity](notes/continuity.pdf)
+
+  $\epsilon$-$\delta$ continuity at a point with the sequential and topological characterizations; the algebra of continuous functions; the intermediate value theorem (the topological reason market-clearing arguments work); the extreme value theorem (the topological reason optimization problems have solutions); uniform continuity and the Heine–Cantor theorem.
+
+## Foundations: probability and measure
+
+- [Probability spaces and measures](notes/probability-spaces-and-measures.pdf)
+
+  $\sigma$-algebras (the right collection of subsets to assign probabilities to, given that the full power set $\mathcal{P}(\mathbb{R})$ is too rich to admit a translation-invariant countably additive measure); measures and the Kolmogorov axioms; basic measure properties (monotonicity, subadditivity, continuity from above and below); Lebesgue measure on $\mathbb{R}$; independence, conditional probability, and Bayes' rule.
+
+- [Integration](notes/integration.pdf)
+
+  Riemann integration with rigor (the partition definition, the FTC, the Dirichlet-function failure of Riemann integrability); Lebesgue integration built in three stages on a measure space; monotone convergence, Fatou's lemma, dominated convergence; the Riemann–Lebesgue agreement theorem and Lebesgue's characterization of Riemann-integrability ("bounded and continuous almost everywhere").
+
+- [Random variables and expectations](notes/random-variables-and-expectations.pdf)
+
+  Random variables as measurable functions; distributions and CDFs (discrete and absolutely continuous); expectation as the Lebesgue integral against the probability measure; variance and covariance; the standard inequalities (Markov, Chebyshev, Jensen, Cauchy–Schwarz); conditional expectation via Radon–Nikodym, with the tower property as the workhorse identity.
+
+- [Convergence and limit theorems](notes/convergence-and-limit-theorems.pdf)
+
+  The four modes of convergence (almost sure, in probability, in $L^p$, in distribution) and their logical relations, with extended footnote on the converse counterexamples; the Borel–Cantelli lemmas; the weak and strong laws of large numbers; the classical i.i.d.\ central limit theorem, with the survey margin-of-error worked example explaining why a sample of $n = 1000$ produces a $\pm 3$-percentage-point confidence band.
+
+## Foundations: formal logic, deeper
+
+- [Proof systems](notes/proof-systems.pdf)
+
+  Natural deduction with introduction and elimination rules and assumption discharge, in Gentzen-style horizontal-line presentation; sequent calculus and Hilbert systems noted in passing; soundness and completeness for propositional logic via Lindenbaum's lemma and the canonical-valuation construction; compactness as a corollary of completeness.
+
+- [First-order logic](notes/first-order-logic.pdf)
+
+  Signatures, terms, formulas (free vs. bound, sentences); structures and Tarski's recursive definition of satisfaction; many-sorted FOL with sorted variables and structures-with-multiple-carriers — the natural setting for political-economy modeling, where the universe of discourse is typed (voters, candidates, strategies, alternatives) rather than a single undifferentiated set; Gödel's completeness theorem stated and contrasted with the incompleteness theorems.
+
+- [Model theory and modeling](notes/model-theory-and-modeling.pdf)
+
+  Theories as sets of sentences, the $\mathrm{Mod}$ / $\mathrm{Th}$ Galois correspondence, elementary equivalence and isomorphism, complete theories, and the semantic view of theories (Suppes, van Fraassen) — and how it lines up with the way political scientists already use the word "model": every Cournot duopoly, agenda-setter model, signaling game is a structure or class of structures in this sense.
