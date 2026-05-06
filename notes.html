@@ -175,8 +175,10 @@ window.Quarto = {
 <section id="grad-notes" class="level1">
 <h1>Grad Notes</h1>
 <p>A growing collection of self-contained handouts on the mathematics needed to read formal political-economy theory and to write it. In the spirit of Kim Border’s mathematical economics notes, but oriented to political scientists, with examples drawn from across political science and political economy. Each handout is independent and reference-able on its own; the numbering below is a suggested reading order rather than a strict prerequisite chain.</p>
-<section id="foundations-language-and-logic" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-language-and-logic">Foundations: language and logic</h2>
+<section id="foundations" class="level2">
+<h2 class="anchored" data-anchor-id="foundations">Foundations</h2>
+<section id="language-and-logic" class="level3">
+<h3 class="anchored" data-anchor-id="language-and-logic">Language and logic</h3>
 <ul>
 <li><p><a href="notes/preface.pdf">Preface</a></p>
 <p>Project framing, conventions, scope, and what is assumed. Background: algebra and a year of calculus.</p></li>
@@ -184,8 +186,8 @@ window.Quarto = {
 <p>The simplest formal system in which the notion of “follows from” can be made precise. Syntax (atomic propositions, connectives, well-formed formulas), semantics (valuations, truth-in-a-valuation), tautology / contradiction / satisfiability, logical equivalence, and logical consequence. PE examples: bicameralism with veto, contraposition in the democratic peace, denying the antecedent as a fallacy.</p></li>
 </ul>
 </section>
-<section id="foundations-sets-and-structures" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-sets-and-structures">Foundations: sets and structures</h2>
+<section id="sets-and-structures" class="level3">
+<h3 class="anchored" data-anchor-id="sets-and-structures">Sets and structures</h3>
 <ul>
 <li><p><a href="notes/naive-set-theory.pdf">Naive set theory</a></p>
 <p>Sets, set operations and the Venn-diagram picture, indexed unions and intersections, Cartesian products and tuples, disjoint unions, relations and equivalence classes, functions, and a closing footnote on Russell’s paradox and how the axiom of separation rules it out.</p></li>
@@ -195,8 +197,8 @@ window.Quarto = {
 <p>Comparing the sizes of infinite sets via bijection; Schröder–Bernstein; the countability of <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, and <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span>; Cantor’s diagonal argument for the uncountability of <span class="math inline">\(\mathbb{R}\)</span>; Cantor’s theorem and the unbounded hierarchy of cardinals; the discrete-versus-continuous translation that organizes a great deal of applied modeling.</p></li>
 </ul>
 </section>
-<section id="foundations-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-analysis">Foundations: analysis</h2>
+<section id="analysis" class="level3">
+<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
 <ul>
 <li><p><a href="notes/sequences-and-limits.pdf">Sequences and limits</a></p>
 <p><span class="math inline">\(\epsilon\)</span>-<span class="math inline">\(N\)</span> convergence; the least upper bound property as the structural fact distinguishing <span class="math inline">\(\mathbb{R}\)</span> from <span class="math inline">\(\mathbb{Q}\)</span>; the construction of <span class="math inline">\(\mathbb{R}\)</span> from <span class="math inline">\(\mathbb{Q}\)</span> as an extended footnote; the completeness-equivalence triangle (LUB / monotone convergence / Cauchy / Bolzano–Weierstrass); and <span class="math inline">\(\limsup\)</span> / <span class="math inline">\(\liminf\)</span> for bounded sequences that don’t converge.</p></li>
@@ -206,8 +208,8 @@ window.Quarto = {
 <p><span class="math inline">\(\epsilon\)</span>-<span class="math inline">\(\delta\)</span> continuity at a point with the sequential and topological characterizations; the algebra of continuous functions; the intermediate value theorem (the topological reason market-clearing arguments work); the extreme value theorem (the topological reason optimization problems have solutions); uniform continuity and the Heine–Cantor theorem.</p></li>
 </ul>
 </section>
-<section id="foundations-probability-and-measure" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-probability-and-measure">Foundations: probability and measure</h2>
+<section id="probability-and-measure" class="level3">
+<h3 class="anchored" data-anchor-id="probability-and-measure">Probability and measure</h3>
 <ul>
 <li><p><a href="notes/probability-spaces-and-measures.pdf">Probability spaces and measures</a></p>
 <p><span class="math inline">\(\sigma\)</span>-algebras (the right collection of subsets to assign probabilities to, given that the full power set <span class="math inline">\(\mathcal{P}(\mathbb{R})\)</span> is too rich to admit a translation-invariant countably additive measure); measures and the Kolmogorov axioms; basic measure properties (monotonicity, subadditivity, continuity from above and below); Lebesgue measure on <span class="math inline">\(\mathbb{R}\)</span>; independence, conditional probability, and Bayes’ rule.</p></li>
@@ -219,8 +221,8 @@ window.Quarto = {
 <p>The four modes of convergence (almost sure, in probability, in <span class="math inline">\(L^p\)</span>, in distribution) and their logical relations, with extended footnote on the converse counterexamples; the Borel–Cantelli lemmas; the weak and strong laws of large numbers; the classical i.i.d.&nbsp;central limit theorem, with the survey margin-of-error worked example explaining why a sample of <span class="math inline">\(n = 1000\)</span> produces a <span class="math inline">\(\pm 3\)</span>-percentage-point confidence band.</p></li>
 </ul>
 </section>
-<section id="foundations-formal-logic-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-formal-logic-deeper">Foundations: formal logic, deeper</h2>
+<section id="formal-logic-deeper" class="level3">
+<h3 class="anchored" data-anchor-id="formal-logic-deeper">Formal logic, deeper</h3>
 <ul>
 <li><p><a href="notes/proof-systems.pdf">Proof systems</a></p>
 <p>Natural deduction with introduction and elimination rules and assumption discharge, in Gentzen-style horizontal-line presentation; sequent calculus and Hilbert systems noted in passing; soundness and completeness for propositional logic via Lindenbaum’s lemma and the canonical-valuation construction; compactness as a corollary of completeness.</p></li>
@@ -228,6 +230,27 @@ window.Quarto = {
 <p>Signatures, terms, formulas (free vs.&nbsp;bound, sentences); structures and Tarski’s recursive definition of satisfaction; many-sorted FOL with sorted variables and structures-with-multiple-carriers — the natural setting for political-economy modeling, where the universe of discourse is typed (voters, candidates, strategies, alternatives) rather than a single undifferentiated set; Gödel’s completeness theorem stated and contrasted with the incompleteness theorems.</p></li>
 <li><p><a href="notes/model-theory-and-modeling.pdf">Model theory and modeling</a></p>
 <p>Theories as sets of sentences, the <span class="math inline">\(\mathrm{Mod}\)</span> / <span class="math inline">\(\mathrm{Th}\)</span> Galois correspondence, elementary equivalence and isomorphism, complete theories, and the semantic view of theories (Suppes, van Fraassen) — and how it lines up with the way political scientists already use the word “model”: every Cournot duopoly, agenda-setter model, signaling game is a structure or class of structures in this sense.</p></li>
+</ul>
+</section>
+</section>
+<section id="categories" class="level2">
+<h2 class="anchored" data-anchor-id="categories">Categories</h2>
+<ul>
+<li><p><a href="notes/categories-and-functors.pdf">Categories and functors</a></p>
+<p>Categories with the basic data (objects, morphisms, composition, identity) and the canonical examples (<span class="math inline">\(\mathbf{Set}\)</span>, <span class="math inline">\(\mathbf{Pos}\)</span>, <span class="math inline">\(\mathbf{Top}\)</span>, <span class="math inline">\(\mathbf{Meas}\)</span>, preorders as thin categories, monoids as one-object categories); iso / mono / epi, with the structuralist moral that “one-to-one” presupposes elements while mono asks only for cancellation under composition — making mono the right concept whenever the units are bracketed (states-as-units in IR theory, aggregate actors in organizational economics); universal properties (initial / terminal / products / coproducts), with the meet-and-join translation in thin categories; functors with examples (forgetful, power-set, hom-functors, voting-rule-as-functor); equivalence of categories. Two extended footnotes: set-of-all-sets vs.&nbsp;category-of-all-categories (size hygiene as the categorical analogue of Russell’s paradox); and the iso/mono/epi vs.&nbsp;injective/surjective/bijective mismatches in non-Set categories.</p></li>
+<li><p><a href="notes/natural-transformations-and-yoneda.pdf">Natural transformations and the Yoneda lemma</a></p>
+<p>Natural transformations and naturality squares; the pointwise-inequality reading in thin categories; functor categories — which finally make precise the “isomorphism of functors” that the previous handout’s equivalence-of-categories definition was leaning on; hom-functors and representable functors; the Yoneda lemma with full proof; the Yoneda embedding <span class="math inline">\(\mathcal{C} \hookrightarrow [\mathcal{C}^{\mathrm{op}}, \mathbf{Set}]\)</span> and the slogan “an object is determined by its maps in” made precise. Closes with a suggestive (and honestly hedged) revealed-preference echo: an alternative is determined by the menus on which it is chosen.</p></li>
+</ul>
+</section>
+<section id="decision-theory" class="level2">
+<h2 class="anchored" data-anchor-id="decision-theory">Decision Theory</h2>
+<ul>
+<li><p><a href="notes/choice-under-certainty.pdf">Choice under certainty</a></p>
+<p>Choice functions and choice correspondences on finite menus, with budget families as the cross-menu observation structure; rationalizability; revealed weak and strict preference; WARP and the Arrow–Sen rationalization theorem; SARP and Houthakker’s theorem; the preference–utility–choice triangle as the synthesis section, with each arrow’s failure mode named (lex preferences for <span class="math inline">\(\succsim \to u\)</span>, empty argmax for <span class="math inline">\(u \to C\)</span>, Condorcet cycle for <span class="math inline">\(C \to \succsim\)</span>). PE: primary voter, agenda setter, Sen’s <span class="math inline">\(\alpha/\beta\)</span> committee failure, Condorcet cycles as population-level WARP failure (the operational version of Arrow’s impossibility caught by the diagnostic axioms).</p></li>
+<li><p><a href="notes/choice-under-risk.pdf">Choice under risk</a></p>
+<p>Lotteries on a finite outcome space (<span class="math inline">\(\Delta(X)\)</span> as a simplex); the von Neumann–Morgenstern axioms with independence as the load-bearing axiom; the expected-utility theorem with full proof in three steps (best/worst extraction, indifference probability via continuity, linear extension via independence); the Allais paradox as a structural failure of independence; prospect theory (S-shaped value function, probability weighting, loss aversion); rank-dependent expected utility as the EU-respecting weakening that preserves stochastic dominance. Two extended footnotes: what independence is geometrically doing (parallel hyperplanes on the Marschak–Machina triangle, Machina 1982 as the principled smooth-utility weakening); and the prospect-theory reference point (status-quo bias, Quattrone–Tversky 1988 on voters framing relative to status quo).</p></li>
+<li><p><a href="notes/choice-under-ambiguity.pdf">Choice under ambiguity</a></p>
+<p>Savage’s subjective expected utility framework with the P1–P7 axioms and the representation theorem stated; Anscombe–Aumann acts (functions from states to lotteries) as the lighter axiomatic path that builds on the previous handout’s vNM machinery; the Ellsberg paradox in the three-color version, with the proof that no single prior rationalizes the modal pattern; Knightian uncertainty as the distinction the Bayesian programme had foreclosed and Ellsberg reopened; Gilboa–Schmeidler maxmin EU as the centerpiece, with the Ellsberg-under-maxmin example worked out and a worked climate-policy regulator example; Schmeidler’s Choquet expected utility, with the Choquet–maxmin equivalence theorem on convex capacities tying the two multi-prior frameworks together. Two extended footnotes: Knight, Keynes, and the Bayesian sweep (with the Allais-vs-Ellsberg conceptual depth comparison); uncertainty aversion as the key axiom (with the Hansen–Sargent robust-control connection).</p></li>
 </ul>
 
 
