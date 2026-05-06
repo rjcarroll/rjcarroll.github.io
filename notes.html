@@ -179,6 +179,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="foundations">Foundations</h2>
 <section id="language-and-logic" class="level3">
 <h3 class="anchored" data-anchor-id="language-and-logic">Language and logic</h3>
+<p>The first formal vocabulary the project assumes — propositions, connectives, valuations, and what follows from what.</p>
 <ul>
 <li><p><a href="notes/preface.pdf">Preface</a></p>
 <p>Project framing, conventions, scope, and what is assumed. Background: algebra and a year of calculus.</p></li>
@@ -188,6 +189,7 @@ window.Quarto = {
 </section>
 <section id="sets-and-structures" class="level3">
 <h3 class="anchored" data-anchor-id="sets-and-structures">Sets and structures</h3>
+<p>Sets and the basic structural vocabulary built on them — set operations, relations, orders, and cardinality.</p>
 <ul>
 <li><p><a href="notes/naive-set-theory.pdf">Naive set theory</a></p>
 <p>Sets, set operations and the Venn-diagram picture, indexed unions and intersections, Cartesian products and tuples, disjoint unions, relations and equivalence classes, functions, and a closing footnote on Russell’s paradox and how the axiom of separation rules it out.</p></li>
@@ -199,6 +201,7 @@ window.Quarto = {
 </section>
 <section id="analysis" class="level3">
 <h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
+<p>Real analysis on <span class="math inline">\(\mathbb{R}^n\)</span> — the structural backbone of every existence-and-comparative-statics argument in formal political-economy theory.</p>
 <ul>
 <li><p><a href="notes/sequences-and-limits.pdf">Sequences and limits</a></p>
 <p><span class="math inline">\(\epsilon\)</span>-<span class="math inline">\(N\)</span> convergence; the least upper bound property as the structural fact distinguishing <span class="math inline">\(\mathbb{R}\)</span> from <span class="math inline">\(\mathbb{Q}\)</span>; the construction of <span class="math inline">\(\mathbb{R}\)</span> from <span class="math inline">\(\mathbb{Q}\)</span> as an extended footnote; the completeness-equivalence triangle (LUB / monotone convergence / Cauchy / Bolzano–Weierstrass); and <span class="math inline">\(\limsup\)</span> / <span class="math inline">\(\liminf\)</span> for bounded sequences that don’t converge.</p></li>
@@ -210,6 +213,7 @@ window.Quarto = {
 </section>
 <section id="probability-and-measure" class="level3">
 <h3 class="anchored" data-anchor-id="probability-and-measure">Probability and measure</h3>
+<p>Measure-theoretic probability, from <span class="math inline">\(\sigma\)</span>-algebras through the central limit theorem — the foundations underlying polling, learning, and any stochastic model.</p>
 <ul>
 <li><p><a href="notes/probability-spaces-and-measures.pdf">Probability spaces and measures</a></p>
 <p><span class="math inline">\(\sigma\)</span>-algebras (the right collection of subsets to assign probabilities to, given that the full power set <span class="math inline">\(\mathcal{P}(\mathbb{R})\)</span> is too rich to admit a translation-invariant countably additive measure); measures and the Kolmogorov axioms; basic measure properties (monotonicity, subadditivity, continuity from above and below); Lebesgue measure on <span class="math inline">\(\mathbb{R}\)</span>; independence, conditional probability, and Bayes’ rule.</p></li>
@@ -223,6 +227,7 @@ window.Quarto = {
 </section>
 <section id="formal-logic-deeper" class="level3">
 <h3 class="anchored" data-anchor-id="formal-logic-deeper">Formal logic, deeper</h3>
+<p>Proof systems, first-order logic, and the model-theoretic vocabulary in which formal political-economy modeling already implicitly operates.</p>
 <ul>
 <li><p><a href="notes/proof-systems.pdf">Proof systems</a></p>
 <p>Natural deduction with introduction and elimination rules and assumption discharge, in Gentzen-style horizontal-line presentation; sequent calculus and Hilbert systems noted in passing; soundness and completeness for propositional logic via Lindenbaum’s lemma and the canonical-valuation construction; compactness as a corollary of completeness.</p></li>
@@ -235,6 +240,7 @@ window.Quarto = {
 </section>
 <section id="categories" class="level2">
 <h2 class="anchored" data-anchor-id="categories">Categories</h2>
+<p>Category theory as a structural language. Two handouts oriented toward the parts a working political economist will encounter: the universal-property style of definition, and the Yoneda lemma’s “an object is determined by its maps in” slogan.</p>
 <ul>
 <li><p><a href="notes/categories-and-functors.pdf">Categories and functors</a></p>
 <p>Categories with the basic data (objects, morphisms, composition, identity) and the canonical examples (<span class="math inline">\(\mathbf{Set}\)</span>, <span class="math inline">\(\mathbf{Pos}\)</span>, <span class="math inline">\(\mathbf{Top}\)</span>, <span class="math inline">\(\mathbf{Meas}\)</span>, preorders as thin categories, monoids as one-object categories); iso / mono / epi, with the structuralist moral that “one-to-one” presupposes elements while mono asks only for cancellation under composition — making mono the right concept whenever the units are bracketed (states-as-units in IR theory, aggregate actors in organizational economics); universal properties (initial / terminal / products / coproducts), with the meet-and-join translation in thin categories; functors with examples (forgetful, power-set, hom-functors, voting-rule-as-functor); equivalence of categories. Two extended footnotes: set-of-all-sets vs.&nbsp;category-of-all-categories (size hygiene as the categorical analogue of Russell’s paradox); and the iso/mono/epi vs.&nbsp;injective/surjective/bijective mismatches in non-Set categories.</p></li>
@@ -244,6 +250,7 @@ window.Quarto = {
 </section>
 <section id="decision-theory" class="level2">
 <h2 class="anchored" data-anchor-id="decision-theory">Decision Theory</h2>
+<p>Individual choice over deterministic alternatives, over lotteries with given probabilities, and over acts when the probabilities themselves are not pinned down — the three escalating positions on the epistemic state of the chooser.</p>
 <ul>
 <li><p><a href="notes/choice-under-certainty.pdf">Choice under certainty</a></p>
 <p>Choice functions and choice correspondences on finite menus, with budget families as the cross-menu observation structure; rationalizability; revealed weak and strict preference; WARP and the Arrow–Sen rationalization theorem; SARP and Houthakker’s theorem; the preference–utility–choice triangle as the synthesis section, with each arrow’s failure mode named (lex preferences for <span class="math inline">\(\succsim \to u\)</span>, empty argmax for <span class="math inline">\(u \to C\)</span>, Condorcet cycle for <span class="math inline">\(C \to \succsim\)</span>). PE: primary voter, agenda setter, Sen’s <span class="math inline">\(\alpha/\beta\)</span> committee failure, Condorcet cycles as population-level WARP failure (the operational version of Arrow’s impossibility caught by the diagnostic axioms).</p></li>
