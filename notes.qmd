@@ -6,7 +6,9 @@ title: ""
 
 A growing collection of self-contained handouts on the mathematics needed to read formal political-economy theory and to write it. In the spirit of Kim Border's mathematical economics notes, but oriented to political scientists, with examples drawn from across political science and political economy. Each handout is independent and reference-able on its own; the numbering below is a suggested reading order rather than a strict prerequisite chain.
 
-## Foundations: language and logic
+## Foundations
+
+### Language and logic
 
 - [Preface](notes/preface.pdf)
 
@@ -16,7 +18,7 @@ A growing collection of self-contained handouts on the mathematics needed to rea
 
   The simplest formal system in which the notion of "follows from" can be made precise. Syntax (atomic propositions, connectives, well-formed formulas), semantics (valuations, truth-in-a-valuation), tautology / contradiction / satisfiability, logical equivalence, and logical consequence. PE examples: bicameralism with veto, contraposition in the democratic peace, denying the antecedent as a fallacy.
 
-## Foundations: sets and structures
+### Sets and structures
 
 - [Naive set theory](notes/naive-set-theory.pdf)
 
@@ -30,7 +32,7 @@ A growing collection of self-contained handouts on the mathematics needed to rea
 
   Comparing the sizes of infinite sets via bijection; Schröder–Bernstein; the countability of $\mathbb{Z}$, $\mathbb{Q}$, and $\mathbb{N} \times \mathbb{N}$; Cantor's diagonal argument for the uncountability of $\mathbb{R}$; Cantor's theorem and the unbounded hierarchy of cardinals; the discrete-versus-continuous translation that organizes a great deal of applied modeling.
 
-## Foundations: analysis
+### Analysis
 
 - [Sequences and limits](notes/sequences-and-limits.pdf)
 
@@ -44,7 +46,7 @@ A growing collection of self-contained handouts on the mathematics needed to rea
 
   $\epsilon$-$\delta$ continuity at a point with the sequential and topological characterizations; the algebra of continuous functions; the intermediate value theorem (the topological reason market-clearing arguments work); the extreme value theorem (the topological reason optimization problems have solutions); uniform continuity and the Heine–Cantor theorem.
 
-## Foundations: probability and measure
+### Probability and measure
 
 - [Probability spaces and measures](notes/probability-spaces-and-measures.pdf)
 
@@ -62,7 +64,7 @@ A growing collection of self-contained handouts on the mathematics needed to rea
 
   The four modes of convergence (almost sure, in probability, in $L^p$, in distribution) and their logical relations, with extended footnote on the converse counterexamples; the Borel–Cantelli lemmas; the weak and strong laws of large numbers; the classical i.i.d.\ central limit theorem, with the survey margin-of-error worked example explaining why a sample of $n = 1000$ produces a $\pm 3$-percentage-point confidence band.
 
-## Foundations: formal logic, deeper
+### Formal logic, deeper
 
 - [Proof systems](notes/proof-systems.pdf)
 
@@ -75,3 +77,27 @@ A growing collection of self-contained handouts on the mathematics needed to rea
 - [Model theory and modeling](notes/model-theory-and-modeling.pdf)
 
   Theories as sets of sentences, the $\mathrm{Mod}$ / $\mathrm{Th}$ Galois correspondence, elementary equivalence and isomorphism, complete theories, and the semantic view of theories (Suppes, van Fraassen) — and how it lines up with the way political scientists already use the word "model": every Cournot duopoly, agenda-setter model, signaling game is a structure or class of structures in this sense.
+
+## Categories
+
+- [Categories and functors](notes/categories-and-functors.pdf)
+
+  Categories with the basic data (objects, morphisms, composition, identity) and the canonical examples ($\mathbf{Set}$, $\mathbf{Pos}$, $\mathbf{Top}$, $\mathbf{Meas}$, preorders as thin categories, monoids as one-object categories); iso / mono / epi, with the structuralist moral that "one-to-one" presupposes elements while mono asks only for cancellation under composition — making mono the right concept whenever the units are bracketed (states-as-units in IR theory, aggregate actors in organizational economics); universal properties (initial / terminal / products / coproducts), with the meet-and-join translation in thin categories; functors with examples (forgetful, power-set, hom-functors, voting-rule-as-functor); equivalence of categories. Two extended footnotes: set-of-all-sets vs. category-of-all-categories (size hygiene as the categorical analogue of Russell's paradox); and the iso/mono/epi vs. injective/surjective/bijective mismatches in non-Set categories.
+
+- [Natural transformations and the Yoneda lemma](notes/natural-transformations-and-yoneda.pdf)
+
+  Natural transformations and naturality squares; the pointwise-inequality reading in thin categories; functor categories — which finally make precise the "isomorphism of functors" that the previous handout's equivalence-of-categories definition was leaning on; hom-functors and representable functors; the Yoneda lemma with full proof; the Yoneda embedding $\mathcal{C} \hookrightarrow [\mathcal{C}^{\mathrm{op}}, \mathbf{Set}]$ and the slogan "an object is determined by its maps in" made precise. Closes with a suggestive (and honestly hedged) revealed-preference echo: an alternative is determined by the menus on which it is chosen.
+
+## Decision Theory
+
+- [Choice under certainty](notes/choice-under-certainty.pdf)
+
+  Choice functions and choice correspondences on finite menus, with budget families as the cross-menu observation structure; rationalizability; revealed weak and strict preference; WARP and the Arrow–Sen rationalization theorem; SARP and Houthakker's theorem; the preference–utility–choice triangle as the synthesis section, with each arrow's failure mode named (lex preferences for $\succsim \to u$, empty argmax for $u \to C$, Condorcet cycle for $C \to \succsim$). PE: primary voter, agenda setter, Sen's $\alpha/\beta$ committee failure, Condorcet cycles as population-level WARP failure (the operational version of Arrow's impossibility caught by the diagnostic axioms).
+
+- [Choice under risk](notes/choice-under-risk.pdf)
+
+  Lotteries on a finite outcome space ($\Delta(X)$ as a simplex); the von Neumann–Morgenstern axioms with independence as the load-bearing axiom; the expected-utility theorem with full proof in three steps (best/worst extraction, indifference probability via continuity, linear extension via independence); the Allais paradox as a structural failure of independence; prospect theory (S-shaped value function, probability weighting, loss aversion); rank-dependent expected utility as the EU-respecting weakening that preserves stochastic dominance. Two extended footnotes: what independence is geometrically doing (parallel hyperplanes on the Marschak–Machina triangle, Machina 1982 as the principled smooth-utility weakening); and the prospect-theory reference point (status-quo bias, Quattrone–Tversky 1988 on voters framing relative to status quo).
+
+- [Choice under ambiguity](notes/choice-under-ambiguity.pdf)
+
+  Savage's subjective expected utility framework with the P1–P7 axioms and the representation theorem stated; Anscombe–Aumann acts (functions from states to lotteries) as the lighter axiomatic path that builds on the previous handout's vNM machinery; the Ellsberg paradox in the three-color version, with the proof that no single prior rationalizes the modal pattern; Knightian uncertainty as the distinction the Bayesian programme had foreclosed and Ellsberg reopened; Gilboa–Schmeidler maxmin EU as the centerpiece, with the Ellsberg-under-maxmin example worked out and a worked climate-policy regulator example; Schmeidler's Choquet expected utility, with the Choquet–maxmin equivalence theorem on convex capacities tying the two multi-prior frameworks together. Two extended footnotes: Knight, Keynes, and the Bayesian sweep (with the Allais-vs-Ellsberg conceptual depth comparison); uncertainty aversion as the key axiom (with the Hansen–Sargent robust-control connection).
