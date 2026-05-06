@@ -88,6 +88,18 @@ Proof systems, first-order logic, and the model-theoretic vocabulary in which fo
 
   Theories as sets of sentences, the $\mathrm{Mod}$ / $\mathrm{Th}$ Galois correspondence, elementary equivalence and isomorphism, complete theories, and the semantic view of theories (Suppes, van Fraassen) — and how it lines up with the way political scientists already use the word "model": every Cournot duopoly, agenda-setter model, signaling game is a structure or class of structures in this sense.
 
+### Linear algebra
+
+Linear algebra over $\mathbb{R}$ — vector spaces, linear maps, eigenvalues, quadratic forms — the foundation under spatial-voting models, network analysis, Markov chains, and the second-order conditions of optimization.
+
+- [Vector spaces and linear maps](notes/vector-spaces-and-linear-maps.pdf)
+
+  Vector spaces with $\mathbb{R}^n$, function spaces $\mathbb{R}^X$, and polynomials as canonical examples (and indicator vectors as a deliberately-not-subspace case); linear independence, span, basis, dimension (with the well-definedness theorem); linear maps with kernel, image, and the rank-nullity theorem; matrices as encodings of linear maps under chosen bases (with matrix multiplication as composition, change of basis as conjugation); inner products, Cauchy–Schwarz, Gram–Schmidt, orthogonal projection. Two extended footnotes: dimension and degrees-of-freedom in PE models (the empirical "how many dimensions of conflict" question — NOMINATE finding two, Plott chaos in higher dimensions); and inner products as similarity (quadratic-loss spatial-voting utility unpacked as an inner-product calculation, "centrist" and "ideologically close" as inner-product statements).
+
+- [Eigenvalue theory and quadratic forms](notes/eigenvalue-theory-and-quadratic-forms.pdf)
+
+  Eigenvalues and eigenvectors with the characteristic-polynomial criterion; diagonalization (with the defective-matrix and Jordan caveat); symmetric matrices and the spectral theorem (real eigenvalues, orthonormal eigenbasis); quadratic forms and definiteness, with eigenvalue-based characterization and Sylvester's criterion via leading principal minors; stochastic matrices and the Perron–Frobenius theorem with the irreducibility and aperiodicity refinement that delivers Markov-chain convergence to a unique stationary distribution. Two extended footnotes: the spectral theorem and self-adjointness (real symmetric vs. Hermitian, normal vs. defective, with PCA and SVD as the structural payoff); and definiteness and concavity (the bordered-Hessian preview for the optimization handouts to come). PE: voter learning as a linear iteration, eigenvector centrality on political networks, a worked two-party voter-migration Markov chain.
+
 ## Categories
 
 Category theory as a structural language. Two handouts oriented toward the parts a working political economist will encounter: the universal-property style of definition, and the Yoneda lemma's "an object is determined by its maps in" slogan.
