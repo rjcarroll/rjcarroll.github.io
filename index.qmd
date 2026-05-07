@@ -84,6 +84,7 @@ Three book manuscripts that reconstruct state-centric IR theory from primitives:
 - [Prediction, proxies, and power](https://doi.org/10.1111/ajps.12442)
   (with [Brenton Kenkel](https://bkenkel.com/))
   *American Journal of Political Science* 63(3): 577–593. 2019.
+  [DOE scores](https://doe-scores.com/)
 
   The capability ratio — the standard measure of relative military power — is barely better than random guessing at predicting militarized dispute outcomes. We build a machine-learning replacement, the Dispute Outcome Expectations (DOE) score, that is an order of magnitude more accurate; using DOE flips the headline conclusion of Reed et al. (2008) and improves goodness of fit across 18 other dyadic replications.
 
