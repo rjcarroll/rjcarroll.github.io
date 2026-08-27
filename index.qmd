@@ -14,6 +14,8 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 - [Fighting in the shadow of intervention: a learned-proxy analysis](shadow.pdf)
 
+  Conditional acceptance at *Political Science Research and Methods*.
+
   A learned-proxy measure of anticipated third-party intervention, covering the full population of potential interveners and disciplined by a Nash fixed-point condition. Expected government-biased intervention deters civil war onset; expected opposition-biased intervention encourages it.
 
 - [Sunspot volatility and the price of peace](sunspot.pdf)
@@ -25,6 +27,8 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
   What does it mean to genuinely unify two scientific theories, as opposed to merely conjoining them? A categorical framework characterizes unification as a *generative effect* and shows that detecting its value requires asking cross-domain questions — so two agents with identical rationality axioms can rationally disagree about whether unification is worth pursuing.
 
 - [The causal content of game-theoretic models](choices.pdf)
+
+  Revise and resubmit at the *American Political Science Review*.
 
   When do game-theoretic models license causal claims? The extensive-form game tree is structurally isomorphic to Dawid's augmented DAG, with strategies as treatment regimes — making effects-of-causes queries tractable in any well-specified game and causes-of-effects queries tractable only when the game provides a *determining concomitant*.
 
@@ -40,7 +44,7 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 ### [Policy spaces as organizational schemes: a semantic theory of electoral competition](semantic-competition.pdf)
 
-(under contract)
+(under contract with Cambridge University Press for *Elements in Campaigns, Elections, and Political Behavior*)
 
 A semantic theory of electoral competition in which voters and candidates hold *understandings* — epistemic-semantic pairs on a complete lattice — rather than positions in a policy space. Policy space is recoverable when a coalition mountain condition holds and absent otherwise; when it fails, the lattice predicts polysemic campaigns, structural polarization, and welfare effects with no spatial analog.
 
