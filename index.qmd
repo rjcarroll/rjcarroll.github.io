@@ -52,9 +52,11 @@ Three book manuscripts that reconstruct state-centric IR theory from primitives:
 
   What *is* force, that states project and balance and apply? The book asks the prior question Clausewitz left unanswered and develops a categorical account in which force is recursive, dynamic, costly, and subjective — recovering Lanchester's laws and Dupuy's combat-power calculus as special cases of a general theory of net assessment.
 
-- [The shape of possible states](shape.pdf)
+- The shape of possible states
 
-  What does it mean for states to be alike? Modeling each as a producer of coercive capacity, the book shows that the space of possible states is contractible under regularity conditions on production technology and cost; the real content of the result lies in the admissibility conditions that mark the phase boundary between the classical regime where the theorem holds and the wild regime where it fails.
+  (v2; under contract with Palgrave Macmillan)
+
+  What does it mean for states to be alike? Modeling each state as a producer of coercive capacity, the book asks when its internal constitution yields one standing policy and what shape the resulting policy families have. The answer is graded: the tame core is contractible and the full classical space is path-connected; higher topology remains open, while beyond the ordinal fence a constitution may yield only a solution correspondence rather than a policy at all.
 
 - [War and peace in the marketplace](market.pdf)
 
