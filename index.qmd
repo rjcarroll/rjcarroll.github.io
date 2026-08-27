@@ -24,7 +24,7 @@ The five links are ["Cliques in random graphs"](https://doi.org/10.1017/S0305004
 
   Conditional acceptance at *Political Science Research and Methods*.
 
-  A learned-proxy measure of anticipated third-party intervention, covering the full population of potential interveners and disciplined by a Nash fixed-point condition. Expected government-biased intervention deters civil war onset; expected opposition-biased intervention encourages it.
+  A learned-proxy measure predicts intervention probability and direction for every potential intervener, makes those predictions mutually consistent through a Nash fixed point, and aggregates them into a country-year shadow. Its two estimable axes are net tilt—the difference between opposition- and government-biased expectations—and total intensity—their sum. Onset falls with intensity in every measurement draw and rises with opposition tilt in a clear majority, a pattern that leans away from common-prior screening and toward limited commitment or divergent expectations.
 
 - [Sunspot volatility and the price of peace](sunspot.pdf)
 
