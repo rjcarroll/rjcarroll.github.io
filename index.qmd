@@ -68,9 +68,9 @@ Three book manuscripts that reconstruct state-centric IR theory from primitives:
 
 ## Published work
 
-- [Policy devolution and cooperation dilemmas](policy-devolution.pdf)
+- [Policy devolution and cooperation dilemmas](https://doi.org/10.1177/09516298261454888)
   (with [Chris Reenock](https://chrisreenock.wordpress.com/) and [David Konisky](https://energyjustice.indiana.edu/))
-  Forthcoming in *Journal of Theoretical Politics*.
+  *Journal of Theoretical Politics*. Published online June 9, 2026.
 
   A formal-and-empirical model of regulatory effort under fragmented jurisdictional design, focused on the case where "gravity goes one way" — spillovers follow a partial order, as with water pollution. The model shows that regulators exert less effort near the bottom of their jurisdiction; the empirical half tests this with a novel GIS dataset of state regional offices and major facilities under the Clean Water Act.
 
