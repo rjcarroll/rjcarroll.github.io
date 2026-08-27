@@ -66,7 +66,7 @@ Three book manuscripts that reconstruct state-centric IR theory from primitives:
 
 - The shape of possible states
 
-  (v2; under contract with Palgrave Macmillan)
+  (under contract with Palgrave Macmillan)
 
   What does it mean for states to be alike? Modeling each state as a producer of coercive capacity, the book asks when its internal constitution yields one standing policy and what shape the resulting policy families have. The answer is graded: the tame core is contractible and the full classical space is path-connected; higher topology remains open, while beyond the ordinal fence a constitution may yield only a solution correspondence rather than a policy at all.
 
