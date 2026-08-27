@@ -10,14 +10,6 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 [rjc@illinois.edu](mailto:rjc@illinois.edu) · [Schedule a meeting](https://calendly.com/robcarroll)
 
-## Five steps from Erdős
-
-An Erdős number is the length of the shortest coauthorship chain back to Paul Erdős. Mine is 5:
-
-**Paul Erdős → Béla Bollobás → Alex Scott → Mark Fey → Brenton Kenkel → me**
-
-The five links are ["Cliques in random graphs"](https://doi.org/10.1017/S0305004100053056), ["Packing random graphs and hypergraphs"](https://doi.org/10.1002/rsa.20673), ["The minimal covering set in large tournaments"](https://doi.org/10.1007/s00355-010-0503-4), ["Is an ultimatum the last word on crisis bargaining?"](https://doi.org/10.1086/708951), and ["Prediction, proxies, and power"](https://doi.org/10.1111/ajps.12442). It is an especially pleasing chain: Brenton is one of my good friends, Mark was one of my dissertation advisers, and Bollobás wrote one of my favorite textbooks.
-
 ## Papers
 
 - [Fighting in the shadow of intervention: a learned-proxy analysis](shadow.pdf)
@@ -116,3 +108,11 @@ Three book manuscripts that reconstruct state-centric IR theory from primitives:
 
 **PS 398: Strategic International Relations** — formal methods in IR theory
 [Syllabus](ps398-syllabus.pdf) · [Sample problem set](ps398-problemset-01.pdf) · [Lecture notes](ps398-notes1.pdf)
+
+## Erdős number
+
+An Erdős number is the length of the shortest coauthorship chain back to Paul Erdős. Mine is 5:
+
+**Paul Erdős → Béla Bollobás → Alex Scott → Mark Fey → Brenton Kenkel → me**
+
+The five links are ["Cliques in random graphs"](https://doi.org/10.1017/S0305004100053056), ["Packing random graphs and hypergraphs"](https://doi.org/10.1002/rsa.20673), ["The minimal covering set in large tournaments"](https://doi.org/10.1007/s00355-010-0503-4), ["Is an ultimatum the last word on crisis bargaining?"](https://doi.org/10.1086/708951), and ["Prediction, proxies, and power"](https://doi.org/10.1111/ajps.12442). It is an especially pleasing chain: Brenton is one of my good friends, Mark was one of my dissertation advisers, and Bollobás wrote one of my favorite textbooks.
