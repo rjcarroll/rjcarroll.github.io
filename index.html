@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="policy-spaces-as-organizational-schemes-a-semantic-theory-of-electoral-competition" class="level3">
 <h3 class="anchored" data-anchor-id="policy-spaces-as-organizational-schemes-a-semantic-theory-of-electoral-competition"><a href="semantic-competition.pdf">Policy spaces as organizational schemes: a semantic theory of electoral competition</a></h3>
 <p>(under contract with Cambridge University Press for <em>Elements in Campaigns, Elections, and Political Behavior</em>)</p>
-<p>A semantic theory of electoral competition in which voters and candidates hold <em>understandings</em> — epistemic-semantic pairs on a complete lattice — rather than positions in a policy space. Policy space is recoverable when a coalition mountain condition holds and absent otherwise; when it fails, the lattice predicts polysemic campaigns, structural polarization, and welfare effects with no spatial analog.</p>
+<p>A semantic model of electoral competition in which the politically relevant space depends on voters’ understandings and can change through communication. The manuscript studies stable and cycling responses to fixed messages, identifies conditions for reducing the feasible message domain while preserving electoral incentives, and shows how public opposition can strengthen an appeal. A worked election has pure equilibria with active conflict and no common single-peaked policy order.</p>
 </section>
 <section id="force-state-market" class="level3">
 <h3 class="anchored" data-anchor-id="force-state-market">Force, State, Market</h3>
@@ -296,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/robertjcarroll\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
