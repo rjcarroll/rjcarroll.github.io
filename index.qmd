@@ -46,7 +46,7 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 (under contract with Cambridge University Press for *Elements in Campaigns, Elections, and Political Behavior*)
 
-A semantic model of electoral competition in which the politically relevant space depends on voters’ understandings and can change through communication. The manuscript studies stable and cycling responses to fixed messages, identifies conditions for reducing the feasible message domain while preserving electoral incentives, and shows how public opposition can strengthen an appeal. A worked election has pure equilibria with active conflict and no common single-peaked policy order.
+Which differences between political appeals matter depends on who hears them. This manuscript develops a semantic model of audience- and coalition-dependent political relevance. With shared, fixed representational categories, it identifies content sufficient to preserve audience evaluations at a finite election horizon, even with active conflict and feedback, and gives conditions under which reducing the feasible menu preserves electoral incentives. A worked election shows how audience composition and rejection costs can create or remove pure equilibrium, with stable regions despite the absence of a common weakly single-peaked ordering. Communication can make an opponent’s objection valuable to supporters, while public reactions can keep cycling after understandings settle.
 
 ### Force, State, Market
 
