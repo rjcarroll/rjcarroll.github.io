@@ -28,8 +28,6 @@ I'm a political scientist at the University of Illinois at Urbana-Champaign. I t
 
 - [Causal claims with game-theoretic models](choices.pdf)
 
-  Revise and resubmit at the *American Political Science Review*.
-
   Game-theoretic models support causal arguments, but what follows from a model need not be identified by observed play. A reporting protocol separates the model, causal question and evidence, with deterrence and candidate-entry applications showing what additional assumptions or observations can establish.
 
 - [A state is its relations: the Yoneda lemma and relational identity in international relations](yoneda-ir.pdf)
