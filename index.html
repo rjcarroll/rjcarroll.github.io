@@ -163,7 +163,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="theories.pdf">Preferring unified theories</a></p>
 <p>What does it mean to genuinely unify two scientific theories, as opposed to merely conjoining them? A categorical framework characterizes unification as a <em>generative effect</em> and shows that detecting its value requires asking cross-domain questions — so two agents with identical rationality axioms can rationally disagree about whether unification is worth pursuing.</p></li>
 <li><p><a href="choices.pdf">Causal claims with game-theoretic models</a></p>
-<p>Revise and resubmit at the <em>American Political Science Review</em>.</p>
 <p>Game-theoretic models support causal arguments, but what follows from a model need not be identified by observed play. A reporting protocol separates the model, causal question and evidence, with deterrence and candidate-entry applications showing what additional assumptions or observations can establish.</p></li>
 <li><p><a href="yoneda-ir.pdf">A state is its relations: the Yoneda lemma and relational identity in international relations</a></p>
 <p>Within any frame that specifies actors and the relations among them, the Yoneda lemma fixes an actor’s identity by its complete profile of relations — and says nothing about the choice of frame. The asymmetry threads the IR essentialism-trap debate: identity is relational profile, given a frame; the frame remains structurally open.</p></li>
@@ -296,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/robertjcarroll\.com");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
